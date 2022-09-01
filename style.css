@@ -95,7 +95,7 @@ main {
       z-index: 1;
       width: 100%;
       height: 100%;
-      background-image: url("img/main.jpg");
+      background-image: url("img/main-min.jpg");
       background-size: cover;
       background-position: center; }
     main section#main-section #main-opensea-button {
