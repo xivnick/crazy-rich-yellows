@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="reset.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href='https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css'>
+	<title>Crazy Rich Yellows</title>
+</head>
+<body>
+	<nav>
+		<div id="nav-left" class="left">
+			<a onclick="move(0)">
+				<img id="logo" src="img/logo.png">
+			</a>
+		</div>
+		<div id="nav-right" class="right">
+			<div id="lang">
+				<ul>
+					<li><a href="#" id="eng" onclick="change_lang(0); return false;" class="activate">ENG</a></li>
+					<li><a href="#" id="kor" onclick="change_lang(1); return false;">KOR</a></li>
+				</ul>
+			</div>
+			<div id="button-container">
+				<a><div id="discord-button" class="yellow mini-square">
+					<img src="img/discord-logo.svg">
+				</div></a>
+				<a href="https://twitter.com/crazyrichyellow" target="_blank"><div id="twitter-button" class="yellow mini-square">
+					<img src="img/twitter-logo.svg">
+				</div></a>
+				<a><div id="opensea-button" class="yellow mini-square">
+					<img src="img/opensea-logo.svg">
+				</div></a>
+			</div>
+			<div id="navigation" class="right">
+				<ul>
+					<li><a href="#" onclick="return move(1)">ABOUT</a></li>
+					<li><a href="#" onclick="return move(2)">COLLECTIONS</a></li>
+					<li><a href="#" onclick="return move(3)">TEAM</a></li>
+					<li><a href="#" onclick="return move(4)">JOIN US</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main>
+		<section id="main-section">
+			<div id="main-background"></div>
+			<button id="main-opensea-button" class="yellow long-button">
+				<img src="img/opensea-logo.svg">
+				Immigrate Now
+			</button>
+			<a href="#" onclick="return move(1)"><div id="main-scroll-button">
+				<img src="img/button_scroll.png">
+			</div></a>
+		</section>
+		<section id="about-section">
+			<div id="yellow-man-img"></div>
+			<h1>Who is Yellow Man?</h1>
+			<p class="eng">
+				Several months ago, Yellow Land, a decentralized micronation, was founded.<br/>
+				There has been much rumors flying around about the identity of the founder of Yellow Land, known as “Yellow Man”.<br/>
+				Despite the rumors, no one knows for sure who Yellow Man is,<br/>
+				except for the fact that a massive amount of BTC was moved on the Blockchain network upon the foundation of Yellow Land.<br/>Can he be the founder of BTC?<br/>
+				<br/>
+				Surprisingly, Yellow Man has granted everyone the opportunity to immigrate to Yellow Land.<br>
+				After obtaining a near infinite amount of money, owning the power of the nation is no longer in his interest.<br>
+				Yellow Man is more interested in how the nation will turn out in the hands of the Yellows.
+			</p>
+			<p class="kor no-display">
+				몇 달 전 정식으로 건국을 선포한 도시국가 Yellow Land, 그리고 그곳의 건설자 Yellow Man.<br/>
+				그의 정체를 두고 여러 추측이 오가고 있지만 정확한 정체는 아무도 알아내지 못했습니다.<br/>
+				YellowLand의 건국 선포 이후 이동한 막대한 양의 암호화폐를 근거로 크립토의 수장이었다는 소문이 돌 뿐..<br/>
+				<br/>
+				놀랍게도 그는 본인이 건설한 Yellow Land의 주인이 될 기회를 모두에게 주겠다고 발표했습니다.<br/>
+				무한에 가까운 돈을 가지게 된 그에게 도시국가의 권력 정도는 우스운 수준이라면서요.<br/>
+				Yellow Man은 여러분이 어떻게 행동하는지에 더 흥미가 있는 것 같아 보입니다.<br/>
+			</p>
+			<button id="whitepaper-button" class="yellow long-button">Yellows Whitepaper</button>
+		</section>
+		<section id="collections-section">
+			<div id="section-left">
+				<img src="img/button_scroll.png" class="passport-side-button clockwise">
+				<div id="passport">
+					<div id="passport-top">
+						<div id="passport-mark">YELLOWS 12345678</div>
+					</div>
+					<div id="passport-bottom">
+						<div id="passport-title">YELLOWLAND PASSPORT</div>
+						<div id="passport-main">
+							<div id="passport-main-left">
+								<div class="passport-property">
+									<span class="property-title">NO.</span>
+									<span class="property-text">12345678</span>
+								</div>
+								<img src="img/c6557.png">
+							</div>
+							<div id="passport-main-right">
+								<div class="passport-property">
+									<span class="property-title">FACE</span>
+									<span class="property-text">Yellow</span>
+								</div>
+								<div class="passport-property">
+									<span class="property-title">HAIR</span>
+									<span class="property-text">Brown Ooo</span>
+								</div>
+								<div class="passport-property">
+									<span class="property-title">EYES</span>
+									<span class="property-text">Default</span>
+								</div>
+								<div class="passport-property">
+									<span class="property-title">GLASSES</span>
+									<span class="property-text">-</span>
+								</div>
+								<div class="passport-property">
+									<span class="property-title">MOUTH</span>
+									<span class="property-text">Black Mask</span>
+								</div>
+								<div class="passport-property">
+									<span class="property-title">ACCESSORY</span>
+									<span class="property-text">-</span>
+								</div>
+								<div class="passport-property">
+									<span class="property-title">CLOTHES</span>
+									<span class="property-text">Blue Ooo</span>
+								</div>
+								<div class="passport-property">
+									<span class="property-title">HAND</span>
+									<span class="property-text">-</span>
+								</div>
+							</div>
+						</div>
+						<div id="passport-footer">
+							Y&lt;&lt;YELLOW&lt;&lt;&lt;MAN&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;<br/>
+							12345678&lt;&lt;&lt;&lt;CRAZY&lt;&lt;&lt;RICH&lt;&lt;&lt;YELLOWS&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;
+						</div>
+					</div>
+					<div id="passport-border">
+					</div>
+				</div>
+				<img src="img/button_scroll.png" class="passport-side-button counterclockwise">
+			</div>
+			<div id="section-right">
+				<h1>
+					<span class="bigger">5.6K<br></span>
+					Unique NFT Collections
+				</h1>
+				<p class="eng">
+					There are 5,600 unique “Yellows” in the Crazy Rich Yellows collection. They live in Yellow Land and each Yellow has voting rights to vote for the next president of Yellow Land.<br/>
+					<br/>
+					All Yellows are eternally recorded on the ETH Blockchain in the form of ERC-721 tokens. Their profile pictures are also safely stored on the IFPS.
+				</p>
+				<p class="kor no-display">
+					Crazy Rich Yellows Collection에는 서로 다른 5,600개의 Yellows들이 존재합니다. 이들은 YellowLand에 살아가며, YelllowLand의 주인을 선택할 수 있는 투표권을 가지게 됩니다.<br/>
+					<br/>
+					모든 Yellows는 ERC-721 토큰으로 이더리움 블록체인 내에 영원히 기록되어 있습니다. 그들의 초상화 또한 IPFS에 저장되어 안전하게 보존됩니다.
+				</p>
+			</div>
+		</section>
+		<section id="team-section">
+			<h2>Yellows Team Collections</h2>
+			<div id="collections">
+					<img src="img/collection1.png">
+					<img src="img/collection2.png">
+					<img src="img/collection3.png">
+					<img src="img/collection4.png">
+					<img src="img/collection5.png">
+					<img src="img/collection6.png">
+					<img src="img/collection7.png">
+					<img src="img/collection8.png">
+					<img src="img/collection9.png">
+					<img src="img/collection10.png">
+					<img src="img/collection11.png">
+					<img src="img/collection12.png">
+			</div>
+			<h2>Investor & Partner</h2>
+			<div id="partners">
+				<img src="img/softbank-logo.svg">
+				<img src="img/kream-logo.svg">
+				<img src="img/kakao-ent-logo.svg">
+			</div>
+		</section>
+		<section id="join-us-section">
+			<div id="join-us-background"></div>
+			<div id="join-us-background-cover"></div>
+			<div id="join-us-background-on"></div>
+			<div id="join-us-wrapper">
+				<h2>JOIN US</h2>
+				<h1>Immigrate Now</h1>
+				<div id="join-us-button-container">
+					<a href=""><div class="big-square">
+						<img src="img/discord-logo.svg">
+						<div class="button-text">Discord</div class="button-text">
+					</div></a>
+					<a href="https://twitter.com/crazyrichyellow" target="_blank"><div class="big-square">
+						<img src="img/twitter-logo.svg">
+						<div class="button-text">Twitter</div class="button-text">
+					</div></a>
+					<a href=""><div class="big-square">
+						<img src="img/opensea-logo.svg">
+						<div class="button-text">Opensea</div class="button-text">
+					</div></a>
+				</div>
+			</div>
+		</section>	
+	</main>
+	<script type="text/javascript">
+
+		window.scrollTo({top:0, left:0});
+
+		let running = false;
+		let section = 0;
+
+		window.addEventListener("wheel", function(e){
+			e.preventDefault();
+			let delta = 0;
+
+			if (!event) event = window.event;
+			if (event.wheelDelta) {
+			  delta = event.wheelDelta / 120;
+			  if (window.opera) delta = -delta;
+			} 
+			else if (event.detail)
+			  delta = -event.detail / 3;
+
+			if(!running){
+				running = true;
+				setTimeout(() => {running = false}, 1500);
+
+				if(delta < 0 && section < 4) section++;
+				if(delta > 0 && section > 0) section--;
+
+				window.scrollTo({top: (window.innerHeight-60) * section, left:0});
+
+			}
+
+		},{passive : false});
+
+		function move(sec) {
+			section = sec;
+
+			window.scrollTo({top: (window.innerHeight-60) * section, left:0});
+
+			return false;
+		}
+
+		function change_lang(sel) {
+			// eng
+
+			const eng = document.querySelector('#eng');
+			const kor = document.querySelector('#kor');
+
+			const engs = document.querySelectorAll('.eng');
+			const kors = document.querySelectorAll('.kor');
+
+			if(sel === 0) {
+
+				eng.classList.add('activate');
+				kor.classList.remove('activate');
+
+				for(const e of engs) e.classList.remove('no-display');
+				for(const k of kors) k.classList.add('no-display');
+			}
+
+			// kor 
+			else {
+
+				kor.classList.add('activate');
+				eng.classList.remove('activate');
+
+				for(const e of engs) e.classList.add('no-display');
+				for(const k of kors) k.classList.remove('no-display');
+			}
+
+			return false;
+		}
+	</script>
+</body>
+
+</html>

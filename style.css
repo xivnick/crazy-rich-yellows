@@ -1,0 +1,353 @@
+html {
+  scroll-behavior: smooth; }
+
+body {
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif; }
+
+html, body {
+  height: 100%; }
+
+.yellow {
+  background-color: #F0C737; }
+
+.left {
+  float: left; }
+
+.right {
+  float: right; }
+
+nav {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  height: 60px;
+  padding: 0 75px;
+  background-color: #111111;
+  font-size: 15px;
+  font-weight: 700; }
+  nav #nav-left {
+    height: 100%;
+    display: flex;
+    align-items: center; }
+    nav #nav-left #logo {
+      height: 36px; }
+  nav #nav-right {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse; }
+    nav #nav-right #navigation {
+      color: #FFFFFF; }
+      nav #nav-right #navigation ul {
+        display: flex; }
+      nav #nav-right #navigation li {
+        margin-right: 37.5px; }
+    nav #nav-right #button-container {
+      display: flex; }
+      nav #nav-right #button-container .mini-square {
+        width: 30px;
+        height: 30px;
+        border-radius: 6px;
+        margin-right: 11px;
+        display: flex; }
+        nav #nav-right #button-container .mini-square img {
+          display: block;
+          margin: auto;
+          width: 21px; }
+    nav #nav-right #lang ul {
+      display: flex; }
+    nav #nav-right #lang li {
+      margin-left: 20px; }
+      nav #nav-right #lang li a {
+        color: #333333;
+        transition-duration: 0.2s; }
+        nav #nav-right #lang li a.activate {
+          color: #FFFFFF; }
+
+.clockwise {
+  transform: rotate(90deg); }
+
+.counterclockwise {
+  transform: rotate(-90deg); }
+
+.no-display {
+  display: none; }
+
+main {
+  padding-top: 60px;
+  height: 100%;
+  color: #FFFFFF; }
+  main section {
+    height: 100%;
+    width: 100%;
+    background-color: #111111; }
+    main section .long-button {
+      width: 280px;
+      height: 60px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 32px;
+      text-align: center; }
+    main section#main-section #main-background {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      background-image: url("img/main.jpg");
+      background-size: cover;
+      background-position: center; }
+    main section#main-section #main-opensea-button {
+      position: relative;
+      z-index: 2;
+      left: calc(50% - 280px/2);
+      bottom: 170px;
+      box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.6); }
+      main section#main-section #main-opensea-button img {
+        vertical-align: middle;
+        width: 30px;
+        padding-bottom: 5px;
+        margin-right: 5px; }
+    main section#main-section #main-scroll-button {
+      position: absolute;
+      z-index: 2;
+      width: 100%;
+      height: 38px;
+      background-color: #111111;
+      bottom: -0.5px; }
+      main section#main-section #main-scroll-button img {
+        height: 37.5px;
+        display: block;
+        margin: auto; }
+    main section h1 {
+      font-size: 48px;
+      font-weight: 700; }
+    main section p {
+      font-size: 15px;
+      line-height: 20px;
+      font-weight: 400; }
+    main section h2 {
+      color: #F0C737;
+      font-size: 30px;
+      font-weight: 700; }
+    main section#about-section {
+      padding: 50px 0;
+      height: 100%; }
+      main section#about-section #yellow-man-img {
+        -webkit-transition: background 0.5s;
+        -moz-transition: background 0.5s;
+        -o-transition: background 0.5s;
+        transition: background 0.5s;
+        width: 280px;
+        height: 280px;
+        border-radius: 10px;
+        margin: 0 auto 40px;
+        background-image: url("img/yellowman.png");
+        background-size: cover; }
+        main section#about-section #yellow-man-img:hover {
+          background-image: url("img/yellowman-hover.png"); }
+      main section#about-section h1 {
+        margin-bottom: 22.5px;
+        text-align: center; }
+      main section#about-section p {
+        text-align: center;
+        margin-bottom: 37.5px; }
+      main section#about-section #whitepaper-button {
+        display: block;
+        margin: auto; }
+    main section#collections-section {
+      display: flex;
+      justify-content: center; }
+      main section#collections-section #section-left {
+        height: 100%;
+        width: 584px;
+        display: flex;
+        overflow: hidden; }
+        main section#collections-section #section-left .passport-side-button {
+          margin-top: 465px;
+          height: 37.5px;
+          width: 37.5px; }
+        main section#collections-section #section-left #passport {
+          position: relative;
+          top: -30px;
+          width: 500px;
+          height: 675px;
+          background-color: #FFFFFF;
+          border-radius: 20px;
+          overflow: hidden; }
+          main section#collections-section #section-left #passport #passport-border {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+            border: 10px solid #F0C737; }
+          main section#collections-section #section-left #passport #passport-top {
+            position: absolute;
+            top: 0;
+            width: 500px;
+            height: 337.5px;
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(255, 255, 255, 0.1) 31.26%, rgba(255, 255, 255, 0.1) 67.83%, rgba(255, 255, 255, 0) 100%), rgba(240, 199, 55, 0.3); }
+            main section#collections-section #section-left #passport #passport-top #passport-mark {
+              position: absolute;
+              left: 37.5px;
+              top: 302px;
+              font-weight: 600;
+              font-size: 30px;
+              line-height: 37.5px;
+              color: #808080;
+              transform-origin: top left;
+              transform: rotate(-90deg); }
+          main section#collections-section #section-left #passport #passport-bottom {
+            position: absolute;
+            top: 337.5px;
+            width: 500px;
+            height: 337.5px;
+            background: rgba(240, 199, 55, 0.3); }
+            main section#collections-section #section-left #passport #passport-bottom #passport-title {
+              margin: 11px 0;
+              text-align: center;
+              font-size: 24px;
+              font-weight: 600;
+              color: #808080;
+              opacity: 0.5; }
+            main section#collections-section #section-left #passport #passport-bottom #passport-main {
+              display: flex; }
+              main section#collections-section #section-left #passport #passport-bottom #passport-main .passport-property {
+                width: 140px;
+                height: 52px;
+                padding: 10px 0; }
+                main section#collections-section #section-left #passport #passport-bottom #passport-main .passport-property .property-title {
+                  display: block;
+                  font-weight: 600;
+                  font-size: 11px;
+                  color: #808080;
+                  margin-bottom: 5px; }
+                main section#collections-section #section-left #passport #passport-bottom #passport-main .passport-property .property-text {
+                  display: block;
+                  font-weight: 600;
+                  font-size: 15px;
+                  color: #111111; }
+              main section#collections-section #section-left #passport #passport-bottom #passport-main #passport-main-left {
+                width: 200px;
+                padding-left: 37.5px; }
+                main section#collections-section #section-left #passport #passport-bottom #passport-main #passport-main-left img {
+                  display: block;
+                  object-fit: cover;
+                  height: 150px;
+                  width: 120px; }
+              main section#collections-section #section-left #passport #passport-bottom #passport-main #passport-main-right {
+                width: 300px;
+                display: flex;
+                flex-wrap: wrap; }
+            main section#collections-section #section-left #passport #passport-bottom #passport-footer {
+              position: absolute;
+              bottom: 0;
+              background-color: #FFFFFF;
+              width: 100%;
+              height: 67.5px;
+              padding-top: 5px;
+              font-size: 15px;
+              font-weight: 500;
+              line-height: 24px;
+              color: #111111;
+              text-align: center; }
+      main section#collections-section #section-right {
+        margin-left: 22.5px;
+        height: 100%;
+        width: 280px;
+        text-align: justify;
+        padding-top: 160px; }
+        main section#collections-section #section-right h1 {
+          margin-bottom: 50px; }
+          main section#collections-section #section-right h1 .bigger {
+            font-size: 72px; }
+    main section#team-section {
+      padding-top: 60px;
+      height: 100%; }
+      main section#team-section h2 {
+        text-align: center;
+        margin-bottom: 37.5px; }
+      main section#team-section #collections {
+        padding-bottom: 46px;
+        margin: auto;
+        width: 888px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap; }
+        main section#team-section #collections img {
+          width: 128px;
+          height: 128px;
+          background-color: #552222;
+          margin-bottom: 24px; }
+      main section#team-section #partners {
+        margin: auto;
+        width: 888px;
+        display: flex;
+        justify-content: space-between; }
+        main section#team-section #partners img {
+          width: 280px;
+          height: 120px; }
+    main section#join-us-section {
+      position: relative; }
+      main section#join-us-section #join-us-background {
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        background-image: url("img/join-us.png");
+        background-size: cover;
+        background-position: center; }
+      main section#join-us-section #join-us-background-cover {
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7); }
+      main section#join-us-section #join-us-background-on {
+        position: absolute;
+        z-index: 3;
+        width: 100%;
+        height: 100%;
+        background-image: url("img/join-us-on.png");
+        background-size: cover;
+        background-position: center; }
+      main section#join-us-section #join-us-wrapper {
+        position: relative;
+        z-index: 3;
+        width: 888px;
+        margin: auto;
+        padding-top: 187.5px;
+        font-weight: 900; }
+        main section#join-us-section #join-us-wrapper h2 {
+          font-size: 48px; }
+        main section#join-us-section #join-us-wrapper h1 {
+          line-height: 86px;
+          font-size: 72px; }
+        main section#join-us-section #join-us-wrapper #join-us-button-container {
+          margin-top: 80px;
+          display: flex; }
+          main section#join-us-section #join-us-wrapper #join-us-button-container .big-square {
+            position: relative;
+            display: block;
+            width: 128px;
+            height: 128px;
+            padding-top: 16px;
+            padding-bottom: 11px;
+            background-color: #F0C737;
+            border-radius: 25px;
+            margin-right: 22.5px;
+            color: #111111; }
+            main section#join-us-section #join-us-wrapper #join-us-button-container .big-square img {
+              display: block;
+              margin: auto;
+              width: 86px; }
+            main section#join-us-section #join-us-wrapper #join-us-button-container .big-square .button-text {
+              position: absolute;
+              width: 100%;
+              bottom: 11px;
+              text-align: center;
+              font-weight: 700;
+              font-size: 18px; }
+
+/*# sourceMappingURL=style.css.map */
