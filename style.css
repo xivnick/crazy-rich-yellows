@@ -224,6 +224,7 @@ main section#collections-section #section-left .passport-side-button {
   width: 37.5px;
 }
 main section#collections-section #section-left #passport {
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
   position: relative;
   top: -30px;
   width: 500px;
