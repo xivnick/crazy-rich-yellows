@@ -45,7 +45,9 @@
 	</nav>
 	<main>
 		<section id="main-section">
+			<div id="main-background-cover"></div>
 			<div id="main-background"></div>
+			<img id="i-want-you" src="img/i-want-you.png">
 			<button id="main-opensea-button" class="yellow long-button">
 				<img src="img/opensea-logo.svg">
 				Immigrate Now
@@ -54,7 +56,23 @@
 				<img src="img/button_scroll.png">
 			</div></a>
 		</section>
-		<section id="about-section">
+		<section id="next-yellow-man">
+			<div class="align-center">
+				<div id="random-pfps"></div>
+				<h1>Who is Next Yellow Man?</h1>
+				<p class='eng'>
+					Surprisingly, Yellow Man has granted everyone the opportunity to immigrate to Yellow Land.<br>
+					After obtaining a near infinite amount of money, owning the power of the nation is no longer in his interest.<br>
+					Yellow Man is more interested in how the nation will turn out in the hands of the Yellows.
+				</p>
+				<p class='kor no-display'>
+					놀랍게도 그는 본인이 건설한 Yellow Land의 주인이 될 기회를 모두에게 주겠다고 발표했습니다.<br/>
+					무한에 가까운 돈을 가지게 된 그에게 도시국가의 권력 정도는 우스운 수준이라면서요.<br/>
+					Yellow Man은 여러분이 어떻게 행동하는지에 더 흥미가 있는 것 같아 보입니다.<br/>
+				</p>
+			</div>
+		</section>
+		<section id="about-section" style="display: none;">
 			<div id="yellow-man-img"></div>
 			<h1>Who is Yellow Man?</h1>
 			<p class="eng">
@@ -177,7 +195,6 @@
 			<div id="partners">
 				<img src="img/softbank-logo.svg">
 				<img src="img/kream-logo.svg">
-				<img src="img/kakao-ent-logo.svg">
 			</div>
 		</section>
 		<section id="join-us-section">
@@ -276,5 +293,40 @@
 		}
 	</script>
 </body>
+
+<script>
+	const random_pfps = document.querySelector('#random-pfps');
+
+	const random = (n) => { return Math.floor(Math.random() * n) + 1; }
+
+	const pfp_ids = []
+
+	for(let i = 0; i < 15; i++){
+		let id = random(5500);
+
+		while(id in pfp_ids) id = random(5500);
+
+		pfp_ids.push(id);
+		random_pfps.innerHTML += `<img class='pfp' onclick='change(${i})' src='pfps/y${id}.png'>`
+	}
+
+	const change = (i) => {
+		const pfps = document.querySelectorAll('.pfp');
+
+		if(pfps[i].classList.contains('clicked')) return;
+
+		let new_id = random(5500);
+
+		while(new_id in pfp_ids) new_id = random(5500);
+
+		pfp_ids[i] = new_id;
+
+		pfps[i].classList.add('clicked');
+		setTimeout(()=>{pfps[i].classList.remove('clicked');}, 400);
+		setTimeout(()=>{pfps[i].src = `pfps/y${new_id}.png`;}, 400);
+	}
+	
+
+</script>
 
 </html>
