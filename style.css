@@ -121,6 +121,15 @@ main section {
   width: 100%;
   background-color: #111111;
 }
+main section .align-center {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+main section .align-center .align-center-inner {
+  width: 100%;
+}
 main section .long-button {
   width: 280px;
   height: 60px;
@@ -132,27 +141,49 @@ main section .long-button {
 }
 main section#main-section #main-background-cover {
   position: absolute;
-  z-index: 2;
   width: 100%;
   height: 100%;
-  background-color: #e3c8a1;
-  opacity: 0.5;
+  background-color: #ecddca;
+  opacity: 0.8;
 }
 main section#main-section #main-background {
   position: absolute;
-  z-index: 1;
   width: 100%;
   height: 100%;
   background-image: url("img/main-min.jpg");
   background-size: cover;
   background-position: center;
 }
-main section#main-section #i-want-you {
+main section#main-section .align-center {
   position: absolute;
-  z-index: 3;
-  left: 25%;
-  top: 60%;
-  width: 50%;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+}
+main section#main-section #i-want-you-box-1 {
+  width: 80vmin;
+  height: 60vmin;
+  margin: auto;
+  padding: 0.5vmin;
+  border: 0.6vmin solid #c64353;
+}
+main section#main-section #i-want-you-box-1 #i-want-you-box-2 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: 0.7vmin solid #282828;
+}
+main section#main-section #i-want-you-box-1 #i-want-you-box-2 #yellow-man-pixel {
+  position: absolute;
+  top: -5%;
+  left: 23%;
+  width: 54%;
+}
+main section#main-section #i-want-you-box-1 #i-want-you-box-2 #i-want-you {
+  position: absolute;
+  bottom: 5%;
+  left: 10%;
+  width: 80%;
 }
 main section#main-section #main-opensea-button {
   position: relative;
@@ -195,15 +226,11 @@ main section h2 {
   font-weight: 700;
 }
 main section#next-yellow-man {
-  display: flex;
-  align-items: center;
-}
-main section#next-yellow-man .align-center {
-  width: 100%;
+  text-align: center;
 }
 main section#next-yellow-man #random-pfps {
-  width: 680px;
-  height: 400px;
+  width: 87vmin;
+  height: 51vmin;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
@@ -212,8 +239,8 @@ main section#next-yellow-man #random-pfps {
   margin-bottom: 40px;
 }
 main section#next-yellow-man #random-pfps .pfp {
-  height: 120px;
-  width: 120px;
+  height: 15vmin;
+  width: 15vmin;
   border-radius: 10px;
   background-color: #808080;
   transition-duration: 0.4s;
@@ -227,10 +254,19 @@ main section#next-yellow-man #random-pfps .pfp.clicked {
 }
 main section#next-yellow-man h1 {
   text-align: center;
-  margin-bottom: 22.5px;
+  margin-bottom: 20px;
 }
 main section#next-yellow-man p {
   text-align: center;
+  margin-bottom: 25px;
+}
+main section#next-yellow-man .text-button {
+  font-size: 20px;
+  text-decoration: underline !important;
+}
+main section#next-yellow-man .text-button:hover {
+  color: #F0C737;
+  transition: 0.5s;
 }
 main section#about-section {
   padding: 50px 0;
