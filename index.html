@@ -234,78 +234,83 @@
 			</div>
 		</section>	
 	</main>
-	<script type="text/javascript">
+	
+</body>
 
-		window.scrollTo({top:0, left:0});
+<script type="text/javascript">
 
-		let running = false;
-		let section = 0;
+	window.scrollTo({top:0, left:0});
 
-		window.addEventListener("wheel", function(e){
-			e.preventDefault();
-			let delta = 0;
+	let running = false;
+	let section = 0;
 
-			if (!event) event = window.event;
-			if (event.wheelDelta) {
-			  delta = event.wheelDelta / 120;
-			  if (window.opera) delta = -delta;
-			} 
-			else if (event.detail)
-			  delta = -event.detail / 3;
+	window.addEventListener("wheel", function(e){
+		e.preventDefault();
+		let delta = 0;
 
-			if(!running){
-				running = true;
-				setTimeout(() => {running = false}, 1500);
+		if (!event) event = window.event;
+		if (event.wheelDelta) {
+		  delta = event.wheelDelta / 120;
+		  if (window.opera) delta = -delta;
+		} 
+		else if (event.detail)
+		  delta = -event.detail / 3;
 
-				if(delta < 0 && section < 4) section++;
-				if(delta > 0 && section > 0) section--;
+		if(!running){
+			running = true;
+			setTimeout(() => {running = false}, 1500);
 
-				window.scrollTo({top: (window.innerHeight-60) * section, left:0});
-
-			}
-
-		},{passive : false});
-
-		function move(sec) {
-			section = sec;
+			if(delta < 0 && section < 4) section++;
+			if(delta > 0 && section > 0) section--;
 
 			window.scrollTo({top: (window.innerHeight-60) * section, left:0});
 
-			return false;
 		}
 
-		function change_lang(sel) {
-			// eng
+	},{passive : false});
 
-			const eng = document.querySelector('#eng');
-			const kor = document.querySelector('#kor');
+	function move(sec) {
 
-			const engs = document.querySelectorAll('.eng');
-			const kors = document.querySelectorAll('.kor');
+		console.log('move ' + sec);
 
-			if(sel === 0) {
+		section = sec;
 
-				eng.classList.add('activate');
-				kor.classList.remove('activate');
+		window.scrollTo({top: (window.innerHeight-60) * section, left:0});
 
-				for(const e of engs) e.classList.remove('no-display');
-				for(const k of kors) k.classList.add('no-display');
-			}
+		return false;
+	}
 
-			// kor 
-			else {
+	function change_lang(sel) {
+		// eng
 
-				kor.classList.add('activate');
-				eng.classList.remove('activate');
+		const eng = document.querySelector('#eng');
+		const kor = document.querySelector('#kor');
 
-				for(const e of engs) e.classList.add('no-display');
-				for(const k of kors) k.classList.remove('no-display');
-			}
+		const engs = document.querySelectorAll('.eng');
+		const kors = document.querySelectorAll('.kor');
 
-			return false;
+		if(sel === 0) {
+
+			eng.classList.add('activate');
+			kor.classList.remove('activate');
+
+			for(const e of engs) e.classList.remove('no-display');
+			for(const k of kors) k.classList.add('no-display');
 		}
-	</script>
-</body>
+
+		// kor 
+		else {
+
+			kor.classList.add('activate');
+			eng.classList.remove('activate');
+
+			for(const e of engs) e.classList.add('no-display');
+			for(const k of kors) k.classList.remove('no-display');
+		}
+
+		return false;
+	}
+</script>
 
 <script>
 	const random_pfps = document.querySelector('#random-pfps');
