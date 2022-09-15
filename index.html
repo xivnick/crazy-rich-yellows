@@ -52,7 +52,8 @@
 				<div class=align-center-inner>
 					<div id="i-want-you-box-1">
 						<div id="i-want-you-box-2">
-							<img id="yellow-man-pixel" src="img/yellowman-pixel.png">
+							<img id="yellow-man-pixel" src="img/yellowman-pixel2.png">
+							<img id="yellow-man-pixel-cover" src="img/yellowman-pixel.png">
 							<img id="i-want-you" src="img/i-want-you.png">
 						</div>
 					</div>
@@ -338,6 +339,13 @@
 		setTimeout(()=>{pfps[i].src = `pfps/y${new_id}.png`;}, 400);
 	}
 	
+	const ympc = document.querySelector('#yellow-man-pixel-cover');
+	const ymp = document.querySelector('#yellow-man-pixel');
+
+	setTimeout(() => { 
+		ympc.classList.add('fade');
+		ymp.classList.add('fade');
+	}, 1000);
 
 </script>
 

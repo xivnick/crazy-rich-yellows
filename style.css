@@ -173,11 +173,26 @@ main section#main-section #i-want-you-box-1 #i-want-you-box-2 {
   height: 100%;
   border: 0.7vmin solid #282828;
 }
+main section#main-section #i-want-you-box-1 #i-want-you-box-2 #yellow-man-pixel-cover {
+  position: absolute;
+  top: -5%;
+  left: 23%;
+  width: 54%;
+}
+main section#main-section #i-want-you-box-1 #i-want-you-box-2 #yellow-man-pixel-cover.fade {
+  opacity: 0;
+  transition: 2s;
+}
 main section#main-section #i-want-you-box-1 #i-want-you-box-2 #yellow-man-pixel {
   position: absolute;
   top: -5%;
   left: 23%;
   width: 54%;
+  opacity: 0;
+}
+main section#main-section #i-want-you-box-1 #i-want-you-box-2 #yellow-man-pixel.fade {
+  opacity: 1;
+  transition: 2s;
 }
 main section#main-section #i-want-you-box-1 #i-want-you-box-2 #i-want-you {
   position: absolute;
