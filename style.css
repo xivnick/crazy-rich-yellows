@@ -91,7 +91,7 @@ nav #nav-right #lang li {
   margin-left: 20px;
 }
 nav #nav-right #lang li a {
-  color: #333333;
+  color: #555555;
   transition-duration: 0.2s;
 }
 nav #nav-right #lang li a.activate {
@@ -206,25 +206,29 @@ main section#main-section #i-want-you-box-1 #i-want-you-box-2 #i-want-you {
   left: 10%;
   width: 80%;
 }
-main section#main-section #i-want-you-box-1 #speech-bubble {
+main section#main-section #i-want-you-box-1 #speech-bubble-wrapper {
   position: absolute;
   top: 10%;
   left: 75%;
 }
-main section#main-section #i-want-you-box-1 #speech-bubble tr.long > td {
+main section#main-section #i-want-you-box-1 #speech-bubble-wrapper #speech-bubble {
+  width: 100%;
+  table-layout: fixed;
+}
+main section#main-section #i-want-you-box-1 #speech-bubble-wrapper #speech-bubble tr.long > td {
   height: 70px;
 }
-main section#main-section #i-want-you-box-1 #speech-bubble td {
+main section#main-section #i-want-you-box-1 #speech-bubble-wrapper #speech-bubble td {
   width: 5px;
   height: 5px;
 }
-main section#main-section #i-want-you-box-1 #speech-bubble td.long {
+main section#main-section #i-want-you-box-1 #speech-bubble-wrapper #speech-bubble td.long {
   width: 250px;
 }
-main section#main-section #i-want-you-box-1 #speech-bubble td.shadow {
+main section#main-section #i-want-you-box-1 #speech-bubble-wrapper #speech-bubble td.shadow {
   box-shadow: 5px 5px rgba(0, 0, 0, 0.3);
 }
-main section#main-section #i-want-you-box-1 #speech-bubble #bubble-content {
+main section#main-section #i-want-you-box-1 #speech-bubble-wrapper #speech-bubble #bubble-content {
   color: #111111;
   text-align: center;
   font-size: 16px;
@@ -232,10 +236,10 @@ main section#main-section #i-want-you-box-1 #speech-bubble #bubble-content {
   align-items: center;
   line-height: 20px;
 }
-main section#main-section #i-want-you-box-1 #speech-bubble .black {
+main section#main-section #i-want-you-box-1 #speech-bubble-wrapper #speech-bubble .black {
   background-color: #111111;
 }
-main section#main-section #i-want-you-box-1 #speech-bubble .white {
+main section#main-section #i-want-you-box-1 #speech-bubble-wrapper #speech-bubble .white {
   background-color: #FFFFFF;
 }
 main section#main-section #main-scroll-button {
