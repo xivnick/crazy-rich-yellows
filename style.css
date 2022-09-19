@@ -143,6 +143,9 @@ main section .long-button {
   line-height: 32px;
   text-align: center;
 }
+main section#main-section {
+  padding-bottom: 38px;
+}
 main section#main-section #main-background-cover {
   position: absolute;
   width: 100%;
@@ -160,13 +163,12 @@ main section#main-section #main-background {
 }
 main section#main-section .align-center {
   position: absolute;
-  z-index: 10;
-  width: 100%;
-  height: 100%;
+  height: calc(100% - 38px);
 }
 main section#main-section #i-want-you-box-1 {
-  width: 80vmin;
-  height: 60vmin;
+  position: relative;
+  width: 70vmin;
+  height: 70vmin;
   margin: auto;
   padding: 0.5vmin;
   border: 0.6vmin solid #c64353;
@@ -180,8 +182,8 @@ main section#main-section #i-want-you-box-1 #i-want-you-box-2 {
 main section#main-section #i-want-you-box-1 #i-want-you-box-2 #yellow-man-pixel-cover {
   position: absolute;
   top: -5%;
-  left: 23%;
-  width: 54%;
+  left: 15%;
+  width: 70%;
 }
 main section#main-section #i-want-you-box-1 #i-want-you-box-2 #yellow-man-pixel-cover.fade {
   opacity: 0;
@@ -190,8 +192,8 @@ main section#main-section #i-want-you-box-1 #i-want-you-box-2 #yellow-man-pixel-
 main section#main-section #i-want-you-box-1 #i-want-you-box-2 #yellow-man-pixel {
   position: absolute;
   top: -5%;
-  left: 23%;
-  width: 54%;
+  left: 15%;
+  width: 70%;
   opacity: 0;
 }
 main section#main-section #i-want-you-box-1 #i-want-you-box-2 #yellow-man-pixel.fade {
@@ -204,26 +206,45 @@ main section#main-section #i-want-you-box-1 #i-want-you-box-2 #i-want-you {
   left: 10%;
   width: 80%;
 }
-main section#main-section #main-opensea-button {
-  position: relative;
-  z-index: 2;
-  left: calc(50% - 140px);
-  bottom: 170px;
-  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.6);
+main section#main-section #i-want-you-box-1 #speech-bubble {
+  position: absolute;
+  top: 10%;
+  left: 75%;
 }
-main section#main-section #main-opensea-button img {
-  vertical-align: middle;
-  width: 30px;
-  padding-bottom: 5px;
-  margin-right: 5px;
+main section#main-section #i-want-you-box-1 #speech-bubble tr.long > td {
+  height: 70px;
+}
+main section#main-section #i-want-you-box-1 #speech-bubble td {
+  width: 5px;
+  height: 5px;
+}
+main section#main-section #i-want-you-box-1 #speech-bubble td.long {
+  width: 250px;
+}
+main section#main-section #i-want-you-box-1 #speech-bubble td.shadow {
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.3);
+}
+main section#main-section #i-want-you-box-1 #speech-bubble #bubble-content {
+  color: #111111;
+  text-align: center;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  line-height: 20px;
+}
+main section#main-section #i-want-you-box-1 #speech-bubble .black {
+  background-color: #111111;
+}
+main section#main-section #i-want-you-box-1 #speech-bubble .white {
+  background-color: #FFFFFF;
 }
 main section#main-section #main-scroll-button {
   position: absolute;
-  z-index: 2;
+  z-index: 20;
   width: 100%;
   height: 38px;
   background-color: #111111;
-  bottom: -0.5px;
+  bottom: 0;
 }
 main section#main-section #main-scroll-button img {
   height: 37.5px;
@@ -255,7 +276,7 @@ main section#next-yellow-man #random-pfps {
   flex-wrap: wrap;
   justify-content: space-between;
   align-content: space-between;
-  margin-bottom: 40px;
+  margin-bottom: 4vmin;
 }
 main section#next-yellow-man #random-pfps .pfp {
   height: 15vmin;
@@ -273,11 +294,11 @@ main section#next-yellow-man #random-pfps .pfp.clicked {
 }
 main section#next-yellow-man h1 {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 2vmin;
 }
 main section#next-yellow-man p {
   text-align: center;
-  margin-bottom: 25px;
+  margin-bottom: 2.5vmin;
 }
 main section#next-yellow-man .text-button {
   font-size: 20px;
@@ -317,6 +338,30 @@ main section#about-section p {
 main section#about-section #whitepaper-button {
   display: block;
   margin: auto;
+}
+main section#process-section h1 {
+  text-align: center;
+  padding-bottom: 40px;
+}
+main section#process-section #process-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  width: 90vmin;
+  margin-bottom: 7vmin;
+}
+main section#process-section #process-wrapper .process-set {
+  font-size: 18px;
+  text-align: center;
+}
+main section#process-section #process-wrapper .process-set .process-box {
+  width: 27vmin;
+  height: 18vmin;
+  border: 5px solid #F0C737;
+  margin-bottom: 2vmin;
+}
+main section#process-section h2 {
+  text-align: center;
 }
 main section#collections-section {
   display: flex;

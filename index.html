@@ -36,8 +36,8 @@
 			</div>
 			<div id="navigation" class="right">
 				<ul>
-					<li><a href="#" onclick="return move(1)">ABOUT</a></li>
-					<li><a href="#" onclick="return move(2)">COLLECTIONS</a></li>
+					<li><a href="#" onclick="return move(1)">WHO'S NEXT</a></li>
+					<li><a href="#" onclick="return move(2)">PROCESS</a></li>
 					<li><a href="#" onclick="return move(3)">TEAM</a></li>
 					<li><a href="#" onclick="return move(4)">JOIN US</a></li>
 				</ul>
@@ -56,14 +56,53 @@
 							<img id="yellow-man-pixel-cover" src="img/yellowman-pixel.png">
 							<img id="i-want-you" src="img/i-want-you.png">
 						</div>
+						<table id="speech-bubble">
+							<tr>
+								<td></td>
+								<td></td>
+								<td class="black long"></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td class="black"></td>
+								<td class="white long"></td>
+								<td class="black"></td>
+								<td></td>
+							</tr>
+							<tr class="long">
+								<td class="black"></td>
+								<td class="white"></td>
+								<td id="bubble-content" class="white long">
+									<div id="bubble-content-inner">
+										I’m going to build a new country.
+										Bring my hard wallet!
+									</div>
+
+									
+								</td>
+								<td class="white  shadow"></td>
+								<td class="black shadow"></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td class="black"></td>
+								<td class="white long shadow"></td>
+								<td class="black shadow"></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+								<td class="black long shadow"></td>
+								<td></td>
+								<td></td>
+							</tr>
+						</table>
 					</div>
 				</div>
 			</div>
-			
-			<button id="main-opensea-button" class="yellow long-button">
-				<img src="img/opensea-logo.svg">
-				Immigrate Now
-			</button>
 			<a href="#" onclick="return move(1)"><div id="main-scroll-button">
 				<img src="img/button_scroll.png">
 			</div></a>
@@ -109,7 +148,27 @@
 			</p>
 			<button id="whitepaper-button" class="yellow long-button">Yellows Whitepaper</button>
 		</section>
-		<section id="collections-section">
+		<section id="process-section">
+			<div class="align-center"><div class="align-center-inner">
+				<h1>Voting Process</h1>
+				<div id="process-wrapper">
+					<div class="process-set">
+						<div class="process-box"></div>
+						Buy Yellows NFT
+					</div>
+					<div class="process-set">
+						<div class="process-box"></div>
+						Vote for Next Yellow Man
+					</div>
+					<div class="process-set">
+						<div class="process-box"></div>
+						Buy Yellows NFT
+					</div>
+				</div>
+				<h2>Yellow Man Gets 50% of Creater Fee!</h2>
+			</div></div>
+		</section>
+		<section id="collections-section" style="display: none;">
 			<div id="section-left">
 				<img src="img/button_scroll.png" class="passport-side-button clockwise">
 				<div id="passport">
@@ -270,8 +329,6 @@
 	},{passive : false});
 
 	function move(sec) {
-
-		console.log('move ' + sec);
 
 		section = sec;
 
