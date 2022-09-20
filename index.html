@@ -5,18 +5,21 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="reset.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<link rel="stylesheet" type="text/css" href='https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css'>
-	<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+	<!-- <link rel="stylesheet" type="text/css" href='https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css'> -->
+	<!-- <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet"> -->
 	<title>Crazy Rich Yellows</title>
 </head>
 <body>
-	<nav>
+	<nav id="main-nav">
 		<div id="nav-left" class="left">
 			<a onclick="move(0)">
 				<img id="logo" alt="Crazy Rich Yellows" src="img/logo.png">
 			</a>
 		</div>
 		<div id="nav-right" class="right">
+			<a href="#" onclick="click_hamburger(); return false;"><div id="hamburger">
+				<img src="img/hamburger.svg">
+			</div></a>
 			<div id="lang">
 				<ul>
 					<li><a href="#" id="eng" onclick="change_lang(0); return false;" class="activate">ENG</a></li>
@@ -44,66 +47,90 @@
 			</div>
 		</div>
 	</nav>
+	<nav id="hamburger-nav">
+		<div id="navigation2">
+			<ul>
+				<li><a href="#" onclick="return move(1)">WHO'S NEXT</a></li>
+				<li><a href="#" onclick="return move(2)">PROCESS</a></li>
+				<li><a href="#" onclick="return move(3)">TEAM</a></li>
+				<li><a href="#" onclick="return move(4)">JOIN US</a></li>
+			</ul>
+		</div>
+		<div id="lang">
+			<ul>
+				<li><a href="#" id="eng" onclick="change_lang(0); return false;" class="activate">ENG</a></li>
+				<li><a href="#" id="kor" onclick="change_lang(1); return false;">KOR</a></li>
+			</ul>
+		</div>
+	</nav>
+	<div id="background">
+		<div id="background-cover"></div>
+	</div>
 	<main>
-		<section id="main-section">
+		<section id="test-section">
+		</section>
+		<section id="main-section" style="display: none;">
 			<div id="main-background"></div>
 			<div id="main-background-cover"></div>
 			<div class=align-center>
 				<div class=align-center-inner>
-					<div id="i-want-you-box-1">
-						<div id="i-want-you-box-2">
-							<img id="yellow-man-pixel" src="img/yellowman-pixel2.png">
-							<img id="yellow-man-pixel-cover" src="img/yellowman-pixel.png">
-							<img id="i-want-you" src="img/i-want-you.png">
-						</div>
-						<div id="speech-bubble-wrapper">
-							<table id="speech-bubble">
-							<tr>
-								<td></td>
-								<td></td>
-								<td class="black long"></td>
-								<td></td>
-								<td></td>
-							</tr>
-							<tr>
-								<td></td>
-								<td class="black"></td>
-								<td class="white long"></td>
-								<td class="black"></td>
-								<td></td>
-							</tr>
-							<tr class="long">
-								<td class="black"></td>
-								<td class="white"></td>
-								<td id="bubble-content" class="white long">
-									<div id="bubble-content-inner">
-										I’m going to build a new country.
-										Bring my hard wallet!
-									</div>
+					<div id="poster-back">
+						<div id="i-want-you-box-1">
+							<div id="i-want-you-box-2">
+								<img id="yellow-man-pixel" src="img/yellowman-pixel2.png">
+								<img id="yellow-man-pixel-cover" src="img/yellowman-pixel.png">
+								<img id="i-want-you" src="img/i-want-you.png">
+							</div>
+							<div id="speech-bubble-wrapper">
+								<table id="speech-bubble">
+								<tr>
+									<td></td>
+									<td></td>
+									<td class="black long"></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td class="black"></td>
+									<td class="white long"></td>
+									<td class="black"></td>
+									<td></td>
+								</tr>
+								<tr class="long">
+									<td class="black"></td>
+									<td class="white"></td>
+									<td id="bubble-content" class="white long">
+										<div id="bubble-content-inner">
+											I’m going to build a new country.
+											Bring my hard wallet!
+										</div>
 
-									
-								</td>
-								<td class="white  shadow"></td>
-								<td class="black shadow"></td>
-							</tr>
-							<tr>
-								<td></td>
-								<td class="black"></td>
-								<td class="white long shadow"></td>
-								<td class="black shadow"></td>
-								<td></td>
-							</tr>
-							<tr>
-								<td></td>
-								<td></td>
-								<td class="black long shadow"></td>
-								<td></td>
-								<td></td>
-							</tr>
-						</table>
+										
+									</td>
+									<td class="white  shadow"></td>
+									<td class="black shadow"></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td class="black"></td>
+									<td class="white long shadow"></td>
+									<td class="black shadow"></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td class="black long shadow"></td>
+									<td></td>
+									<td></td>
+								</tr>
+							</table>
+							</div>
+							
 						</div>
-						
 					</div>
+					
 				</div>
 			</div>
 			<a href="#" onclick="return move(1)"><div id="main-scroll-button">
@@ -301,7 +328,7 @@
 
 <script type="text/javascript">
 
-	window.scrollTo({top:0, left:0});
+	setTimeout(() => { window.scrollTo({top:0, left:0}); }, 0);
 
 	let running = false;
 	let section = 0;
@@ -320,13 +347,16 @@
 
 		if(!running){
 			running = true;
-			setTimeout(() => {running = false}, 1500);
+			setTimeout(() => {running = false}, 1000);
 
 			if(delta < 0 && section < 4) section++;
 			if(delta > 0 && section > 0) section--;
 
 			window.scrollTo({top: (window.innerHeight-60) * section, left:0});
 
+			const body = document.querySelector('body');
+			if(section > 0) body.classList.add('after-main');
+			else body.classList.remove('after-main');
 		}
 
 	},{passive : false});
@@ -336,6 +366,10 @@
 		section = sec;
 
 		window.scrollTo({top: (window.innerHeight-60) * section, left:0});
+
+		const body = document.querySelector('body');
+		if(section > 0) body.classList.add('after-main');
+		else body.classList.remove('after-main');
 
 		return false;
 	}
@@ -380,9 +414,9 @@
 	const pfp_ids = []
 
 	for(let i = 0; i < 15; i++){
-		let id = random(5500);
+		let id = random(300);
 
-		while(id in pfp_ids) id = random(5500);
+		while(pfp_ids.includes(id)) id = random(300);
 
 		pfp_ids.push(id);
 		random_pfps.innerHTML += `<img class='pfp' onclick='change(${i})' src='pfps/y${id}.png'>`
@@ -393,9 +427,9 @@
 
 		if(pfps[i].classList.contains('clicked')) return;
 
-		let new_id = random(5500);
+		let new_id = random(300);
 
-		while(new_id in pfp_ids) new_id = random(5500);
+		while(pfp_ids.includes(new_id)) new_id = random(300);
 
 		pfp_ids[i] = new_id;
 
@@ -412,6 +446,13 @@
 		ymp.classList.add('fade');
 	}, 1000);
 
+</script>
+
+<script>
+	const click_hamburger = () => {
+		const hamburger_nav = document.querySelector('#humburger-nav');
+		hamburger_nav.classList.toggle('open')
+	}
 </script>
 
 </html>

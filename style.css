@@ -36,8 +36,15 @@ html, body {
 }
 
 nav {
+  transition-duration: 0.4s;
+}
+.after-main nav {
+  transform: translateY(60px);
+}
+
+nav#main-nav {
   position: fixed;
-  top: 0;
+  bottom: 100vh;
   z-index: 10;
   width: 100%;
   height: 60px;
@@ -46,55 +53,117 @@ nav {
   font-size: 15px;
   font-weight: 700;
 }
-nav #nav-left {
+nav#main-nav #nav-left {
   height: 100%;
   display: flex;
   align-items: center;
 }
-nav #nav-left #logo {
+nav#main-nav #nav-left #logo {
   height: 36px;
 }
-nav #nav-right {
+nav#main-nav #nav-right {
   height: 100%;
   display: flex;
   align-items: center;
   flex-direction: row-reverse;
 }
-nav #nav-right #navigation {
+nav#main-nav #nav-right #navigation {
   color: #FFFFFF;
 }
-nav #nav-right #navigation ul {
+nav#main-nav #nav-right #navigation ul {
   display: flex;
 }
-nav #nav-right #navigation li {
+nav#main-nav #nav-right #navigation li {
   margin-right: 37.5px;
 }
-nav #nav-right #button-container {
+@media (max-width: 960px) {
+  nav#main-nav #nav-right #navigation {
+    display: none;
+  }
+}
+nav#main-nav #nav-right #hamburger {
+  width: 30px;
+  height: 30px;
+  margin-left: 30px;
+  display: none;
+  transition-duration: 0.4s;
+}
+nav#main-nav #nav-right #hamburger img {
+  width: 100%;
+}
+@media (max-width: 960px) {
+  nav#main-nav #nav-right #hamburger {
+    display: block;
+  }
+}
+nav#main-nav #nav-right #hamburger:hover {
+  transform: scale(1.1, 1.1);
+}
+nav#main-nav #nav-right #button-container {
   display: flex;
 }
-nav #nav-right #button-container .mini-square {
+nav#main-nav #nav-right #button-container .mini-square {
   width: 30px;
   height: 30px;
   border-radius: 6px;
   margin-right: 11px;
   display: flex;
 }
-nav #nav-right #button-container .mini-square img {
+nav#main-nav #nav-right #button-container .mini-square img {
   display: block;
   margin: auto;
   width: 21px;
 }
-nav #nav-right #lang ul {
+nav#main-nav #nav-right #lang ul {
   display: flex;
 }
-nav #nav-right #lang li {
+nav#main-nav #nav-right #lang li {
   margin-left: 20px;
 }
-nav #nav-right #lang li a {
+nav#main-nav #nav-right #lang li a {
   color: #555555;
   transition-duration: 0.2s;
 }
-nav #nav-right #lang li a.activate {
+nav#main-nav #nav-right #lang li a.activate {
+  color: #FFFFFF;
+}
+@media (max-width: 960px) {
+  nav#main-nav #nav-right #lang {
+    display: none;
+  }
+}
+
+nav#hamburger-nav {
+  position: fixed;
+  z-index: 9;
+  width: 100%;
+  padding: 22.5px 75px 0;
+  text-align: right;
+  background-color: #111111;
+  bottom: 100vh;
+  transition-duration: 0.4s;
+}
+@media (max-width: 960px) {
+  nav#hamburger-nav.open {
+    transform: translateY(100%);
+  }
+}
+nav#hamburger-nav #navigation2 li {
+  margin-bottom: 15px;
+}
+nav#hamburger-nav #lang ul {
+  display: flex;
+  justify-content: right;
+  margin-bottom: 20px;
+}
+nav#hamburger-nav #lang li {
+  margin-left: 20px;
+}
+nav#hamburger-nav #lang li a {
+  color: #555555;
+  transition-duration: 0.2s;
+}
+nav#hamburger-nav #lang li a.activate {
   color: #FFFFFF;
 }
 
@@ -110,20 +179,42 @@ nav #nav-right #lang li a.activate {
   display: none;
 }
 
+#background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("img/main-min.jpg");
+  background-size: cover;
+  background-position: center;
+}
+#background #background-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0;
+  transition: 0.8s;
+}
+.after-main #background-cover {
+  opacity: 0.8 !important;
+}
+
 main {
   position: absolute;
   z-index: 0;
   padding-top: 60px;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   color: #FFFFFF;
 }
 main section {
-  pointer-events: auto;
   position: relative;
   height: 100%;
   width: 100%;
-  background-color: #111111;
 }
 main section .align-center {
   width: 100%;
@@ -146,26 +237,20 @@ main section .long-button {
 main section#main-section {
   padding-bottom: 38px;
 }
-main section#main-section #main-background-cover {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: #ecddca;
-  opacity: 0.8;
-}
-main section#main-section #main-background {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-image: url("img/main-min.jpg");
-  background-size: cover;
-  background-position: center;
-}
 main section#main-section .align-center {
   position: absolute;
   height: calc(100% - 38px);
 }
-main section#main-section #i-want-you-box-1 {
+main section#main-section #poster-back {
+  position: relative;
+  width: 80vmin;
+  height: 80vmin;
+  background-color: #ecddca;
+  margin: auto;
+  display: flex;
+  align-items: center;
+}
+main section#main-section #poster-back #i-want-you-box-1 {
   position: relative;
   width: 70vmin;
   height: 70vmin;
@@ -173,62 +258,62 @@ main section#main-section #i-want-you-box-1 {
   padding: 0.5vmin;
   border: 0.6vmin solid #c64353;
 }
-main section#main-section #i-want-you-box-1 #i-want-you-box-2 {
+main section#main-section #poster-back #i-want-you-box-1 #i-want-you-box-2 {
   position: relative;
   width: 100%;
   height: 100%;
   border: 0.7vmin solid #282828;
 }
-main section#main-section #i-want-you-box-1 #i-want-you-box-2 #yellow-man-pixel-cover {
+main section#main-section #poster-back #i-want-you-box-1 #i-want-you-box-2 #yellow-man-pixel-cover {
   position: absolute;
   top: -5%;
   left: 15%;
   width: 70%;
 }
-main section#main-section #i-want-you-box-1 #i-want-you-box-2 #yellow-man-pixel-cover.fade {
+main section#main-section #poster-back #i-want-you-box-1 #i-want-you-box-2 #yellow-man-pixel-cover.fade {
   opacity: 0;
   transition: 2s;
 }
-main section#main-section #i-want-you-box-1 #i-want-you-box-2 #yellow-man-pixel {
+main section#main-section #poster-back #i-want-you-box-1 #i-want-you-box-2 #yellow-man-pixel {
   position: absolute;
   top: -5%;
   left: 15%;
   width: 70%;
   opacity: 0;
 }
-main section#main-section #i-want-you-box-1 #i-want-you-box-2 #yellow-man-pixel.fade {
+main section#main-section #poster-back #i-want-you-box-1 #i-want-you-box-2 #yellow-man-pixel.fade {
   opacity: 1;
   transition: 2s;
 }
-main section#main-section #i-want-you-box-1 #i-want-you-box-2 #i-want-you {
+main section#main-section #poster-back #i-want-you-box-1 #i-want-you-box-2 #i-want-you {
   position: absolute;
   bottom: 5%;
   left: 10%;
   width: 80%;
 }
-main section#main-section #i-want-you-box-1 #speech-bubble-wrapper {
+main section#main-section #poster-back #i-want-you-box-1 #speech-bubble-wrapper {
   position: absolute;
   top: 10%;
   left: 75%;
 }
-main section#main-section #i-want-you-box-1 #speech-bubble-wrapper #speech-bubble {
+main section#main-section #poster-back #i-want-you-box-1 #speech-bubble-wrapper #speech-bubble {
   width: 100%;
   table-layout: fixed;
 }
-main section#main-section #i-want-you-box-1 #speech-bubble-wrapper #speech-bubble tr.long > td {
+main section#main-section #poster-back #i-want-you-box-1 #speech-bubble-wrapper #speech-bubble tr.long > td {
   height: 70px;
 }
-main section#main-section #i-want-you-box-1 #speech-bubble-wrapper #speech-bubble td {
+main section#main-section #poster-back #i-want-you-box-1 #speech-bubble-wrapper #speech-bubble td {
   width: 5px;
   height: 5px;
 }
-main section#main-section #i-want-you-box-1 #speech-bubble-wrapper #speech-bubble td.long {
+main section#main-section #poster-back #i-want-you-box-1 #speech-bubble-wrapper #speech-bubble td.long {
   width: 250px;
 }
-main section#main-section #i-want-you-box-1 #speech-bubble-wrapper #speech-bubble td.shadow {
+main section#main-section #poster-back #i-want-you-box-1 #speech-bubble-wrapper #speech-bubble td.shadow {
   box-shadow: 5px 5px rgba(0, 0, 0, 0.3);
 }
-main section#main-section #i-want-you-box-1 #speech-bubble-wrapper #speech-bubble #bubble-content {
+main section#main-section #poster-back #i-want-you-box-1 #speech-bubble-wrapper #speech-bubble #bubble-content {
   color: #111111;
   text-align: center;
   font-size: 16px;
@@ -236,10 +321,10 @@ main section#main-section #i-want-you-box-1 #speech-bubble-wrapper #speech-bubbl
   align-items: center;
   line-height: 20px;
 }
-main section#main-section #i-want-you-box-1 #speech-bubble-wrapper #speech-bubble .black {
+main section#main-section #poster-back #i-want-you-box-1 #speech-bubble-wrapper #speech-bubble .black {
   background-color: #111111;
 }
-main section#main-section #i-want-you-box-1 #speech-bubble-wrapper #speech-bubble .white {
+main section#main-section #poster-back #i-want-you-box-1 #speech-bubble-wrapper #speech-bubble .white {
   background-color: #FFFFFF;
 }
 main section#main-section #main-scroll-button {
@@ -285,7 +370,7 @@ main section#next-yellow-man #random-pfps {
 main section#next-yellow-man #random-pfps .pfp {
   height: 15vmin;
   width: 15vmin;
-  border-radius: 10px;
+  border-radius: 1vmin;
   background-color: #808080;
   transition-duration: 0.4s;
 }
@@ -355,6 +440,7 @@ main section#process-section #process-wrapper {
   margin-bottom: 7vmin;
 }
 main section#process-section #process-wrapper .process-set {
+  width: 27vmin;
   font-size: 18px;
   text-align: center;
 }
