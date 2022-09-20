@@ -67,7 +67,10 @@
 		<div id="background-cover"></div>
 	</div>
 	<main>
-		<section id="test-section">
+		<section id="main-section2">
+			<div class="align-center"><div class="align-center-inner">
+				<img id="main-logo" alt="Crazy Rich Yellows" src="img/logo.png">
+			</div></div>
 		</section>
 		<section id="main-section" style="display: none;">
 			<div id="main-background"></div>
@@ -139,8 +142,8 @@
 		</section>
 		<section id="next-yellow-man">
 			<div class="align-center"><div class="align-center-inner">
-				<div id="random-pfps"></div>
 				<h1>Who is Next Yellow Man?</h1>
+				<div id="random-pfps"></div>
 				<p class='eng'>
 					Surprisingly, Yellow Man has granted everyone the opportunity to immigrate to Yellow Land.<br>
 					After obtaining a near infinite amount of money, owning the power of the nation is no longer in his interest.<br>
@@ -373,6 +376,8 @@
 
 		return false;
 	}
+
+	addEventListener('resize', (event) => { move(section) });
 
 	function change_lang(sel) {
 		// eng

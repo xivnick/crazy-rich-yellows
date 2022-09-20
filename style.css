@@ -193,6 +193,15 @@ nav#hamburger-nav #lang li a.activate {
   background-image: url("img/main-min.jpg");
   background-size: cover;
   background-position: center;
+  animation: gray 10s;
+}
+@keyframes gray {
+  0% {
+    filter: grayscale(1);
+  }
+  100% {
+    filter: grayscale(0);
+  }
 }
 #background #background-cover {
   position: absolute;
@@ -220,6 +229,7 @@ main section {
   position: relative;
   height: 100%;
   width: 100%;
+  overflow: hidden;
 }
 main section .align-center {
   width: 100%;
@@ -238,6 +248,21 @@ main section .long-button {
   font-size: 24px;
   line-height: 32px;
   text-align: center;
+}
+main section#main-section2 #main-logo {
+  display: block;
+  width: 810px;
+  padding-bottom: 30px;
+  margin: auto;
+  animation: double 5s;
+}
+@keyframes double {
+  0% {
+    width: 405px;
+  }
+  100% {
+    width: 810px;
+  }
 }
 main section#main-section {
   padding-bottom: 38px;
@@ -362,9 +387,13 @@ main section h2 {
 main section#next-yellow-man {
   text-align: center;
 }
+main section#next-yellow-man h1 {
+  text-align: center;
+  margin-bottom: 50px;
+}
 main section#next-yellow-man #random-pfps {
-  width: 87vmin;
-  height: 51vmin;
+  width: 680px;
+  height: 400px;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
@@ -373,8 +402,8 @@ main section#next-yellow-man #random-pfps {
   margin-bottom: 4vmin;
 }
 main section#next-yellow-man #random-pfps .pfp {
-  height: 15vmin;
-  width: 15vmin;
+  height: 120px;
+  width: 120px;
   border-radius: 1vmin;
   background-color: #808080;
   transition-duration: 0.4s;
@@ -385,10 +414,6 @@ main section#next-yellow-man #random-pfps .pfp:hover {
 main section#next-yellow-man #random-pfps .pfp.clicked {
   transform: rotateY(180deg);
   opacity: 0;
-}
-main section#next-yellow-man h1 {
-  text-align: center;
-  margin-bottom: 2vmin;
 }
 main section#next-yellow-man p {
   text-align: center;
