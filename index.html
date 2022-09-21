@@ -70,6 +70,22 @@
 		<section id="main-section2">
 			<div class="align-center"><div class="align-center-inner">
 				<img id="main-logo" alt="Crazy Rich Yellows" src="img/logo.png">
+				<div id="event">
+					<span class="event-name">Minting</span>
+					<img src="img/link-arrow.png">
+					<span class="date">2022. 10. 09</span>
+				</div>
+				<div id="d-day">
+					<div class="d-day-component">D</div>
+					<div class="d-day-component">-</div>
+					<div class="d-day-component">1</div>
+					<div class="d-day-component">0</div>
+				</div>
+				<div id="next-event">
+					<span id="next-event-prompt">Next Event ></span>
+					<span class="event-name">Reveal</span>
+					<span class="date">2022. 10. 13</span>
+				</div>
 			</div></div>
 			<img onclick="move(1)" id="bottom-arrow" src="img/bottom-arrow.png">
 		</section>
@@ -465,14 +481,20 @@
 		setTimeout(()=>{pfps[i].classList.remove('clicked');}, 400);
 		setTimeout(()=>{pfps[i].src = `pfps/y${new_id}.png`;}, 400);
 	}
-	
-	const ympc = document.querySelector('#yellow-man-pixel-cover');
-	const ymp = document.querySelector('#yellow-man-pixel');
 
-	setTimeout(() => { 
-		ympc.classList.add('fade');
-		ymp.classList.add('fade');
-	}, 1000);
+	setInterval(() => {
+		const id = random(15) - 1;
+		change(id);
+	}, 1500);
+
+	
+	// const ympc = document.querySelector('#yellow-man-pixel-cover');
+	// const ymp = document.querySelector('#yellow-man-pixel');
+
+	// setTimeout(() => { 
+	// 	ympc.classList.add('fade');
+	// 	ymp.classList.add('fade');
+	// }, 1000);
 
 </script>
 
