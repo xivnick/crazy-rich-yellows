@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="reset.css">
 	<link rel="stylesheet" type="text/css" href="style.css?ver=09201620">
-	<!-- <link rel="stylesheet" type="text/css" href='https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css'> -->
+	<link rel="stylesheet" type="text/css" href='https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css'>
 	<!-- <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet"> -->
 	<title>Crazy Rich Yellows</title>
 </head>
@@ -155,7 +155,7 @@
 					무한에 가까운 돈을 가지게 된 그에게 도시국가의 권력 정도는 우스운 수준이라면서요.<br/>
 					Yellow Man은 여러분이 어떻게 행동하는지에 더 흥미가 있는 것 같아 보입니다.<br/>
 				</p>
-				<a class='text-button'>&nbsp;Read Yellows Whitepaper ->&nbsp</a>
+				<a class='text-button'>&nbsp;Read Yellows Full Story ->&nbsp</a>
 			</div></div>
 		</section>
 		<section id="about-section" style="display: none;">
@@ -188,25 +188,32 @@
 				<div id="process-wrapper">
 					<div class="process-set">
 						<img src="img/process-buy.png">
-						1. Buy Yellows NFT
+						<div class="spacer"></div>
+						<div class="align-center"><div class="align-center-inner">
+							<h3>1. Buy Yellows NFT</h3>
+							<p>blah blah about how to buy yellows NFT</p>
+						</div></div>
 					</div>
-					<div class="process-set">
+					<div class="process-set reverse">
+						<div class="spacer"></div>
 						<img src="img/process-vote.png">
-						2. Vote for Next Yellow Man
+						<div class="spacer"></div>
+						<div class="align-center"><div class="align-center-inner">
+							<h3>2. Vote for Next Yellow Man</h3>
+							<p>blah blah about how to vote</p>
+						</div></div>
 					</div>
 					<div class="process-set">
 						<img src="img/process-you.png">
-						3. Next Yellow Man is elected
+						<div class="spacer"></div>
+						<div class="align-center"><div class="align-center-inner">
+							<h3>3. Next Yellow Man is Elected</h3>
+							<p>Yellow Man can bring Yellows to Mars, have pizza party etc. with the budget.</p>
+						</div></div>
 					</div>
 				</div>
-				<!-- <img id="dotdotdot" src="img/dotdotdot.png"> -->
-				<div id="process-line"></div>
-				<h2>If you become Next Yellow Man</h2>
-				<p>
-					You will be get <strong>rights to control</strong> the community and Yellow Land.<br/>
-					You will have <strong>“50 % of royalty”</strong> as budget to control the Yellow Land.<br/>
-					You can bring Yellows to Mars, <strong>have pizza party</strong> etc. with the budget.
-				</p>
+				
+				<a class='text-button'>&nbsp;Read Yellows Whitepaper ->&nbsp</a>
 			</div></div>
 		</section>
 		<section id="collections-section" style="display: none;">
@@ -289,26 +296,32 @@
 			</div>
 		</section>
 		<section id="team-section">
-			<h2>Yellows Team Collections</h2>
-			<div id="collections">
-					<img src="img/collection1.png">
-					<img src="img/collection2.png">
-					<img src="img/collection3.png">
-					<img src="img/collection4.png">
-					<img src="img/collection5.png">
-					<img src="img/collection6.png">
-					<img src="img/collection7.png">
-					<img src="img/collection8.png">
-					<img src="img/collection9.png">
-					<img src="img/collection10.png">
-					<img src="img/collection11.png">
-					<img src="img/collection12.png">
-			</div>
-			<h2>Investor & Partner</h2>
-			<div id="partners">
-				<img src="img/softbank-logo.svg">
-				<img src="img/kream-logo.svg">
-			</div>
+			<div class="align-center"><div class="align-center-inner">
+				<div id="yellows-team-collection-wrapper">
+					<h2>Yellows Team Collections</h2>
+					<div id="collections">
+						<img src="img/collection1.png">
+						<img src="img/collection2.png">
+						<img src="img/collection3.png">
+						<img src="img/collection4.png">
+						<img src="img/collection5.png">
+						<img src="img/collection6.png">
+						<img src="img/collection7.png">
+						<img src="img/collection8.png">
+						<img src="img/collection9.png">
+						<img src="img/collection10.png">
+						<img src="img/collection11.png">
+						<img src="img/collection12.png">
+					</div>
+				</div>
+				<div id="partners-wrapper">
+					<h2>Investor</h2>
+					<div id="partners">
+						<img src="img/softbank-logo.svg">
+						<img src="img/kream-logo.svg">
+					</div>
+				</div>
+			</div></div>
 		</section>
 		<section id="join-us-section">
 			<div id="join-us-background"></div>
@@ -338,6 +351,8 @@
 </body>
 
 <script type="text/javascript">
+
+	const body = document.querySelector('body');
 
 	setTimeout(() => { window.scrollTo({top:0, left:0}); }, 0);
 
