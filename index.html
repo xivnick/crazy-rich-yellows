@@ -22,8 +22,8 @@
 			</div></a>
 			<div id="lang">
 				<ul>
-					<li><a href="#" id="eng" onclick="change_lang(0); return false;" class="activate">ENG</a></li>
-					<li><a href="#" id="kor" onclick="change_lang(1); return false;">KOR</a></li>
+					<li><img href="#" id="eng" onclick="change_lang(0); return false;" src="img/eng.png"></li>
+					<li><img href="#" id="kor" onclick="change_lang(1); return false;" src="img/kor.png"></li>
 				</ul>
 			</div>
 			<div id="button-container">
@@ -58,8 +58,8 @@
 		</div>
 		<div id="lang">
 			<ul>
-				<li><a href="#" id="eng" onclick="change_lang(0); return false;" class="activate">ENG</a></li>
-				<li><a href="#" id="kor" onclick="change_lang(1); return false;">KOR</a></li>
+				<li><img href="#" id="eng" onclick="change_lang(0); return false;" src="img/eng.png"></li>
+				<li><img href="#" id="kor" onclick="change_lang(1); return false;" src="img/kor.png"></li>
 			</ul>
 		</div>
 	</nav>
@@ -68,8 +68,9 @@
 	</div>
 	<main>
 		<section id="main-section2">
+			<img id="main-page-bubbles" src="img/mainpage-bubbles.png">
 			<div class="align-center"><div class="align-center-inner">
-				<img id="main-logo" alt="Crazy Rich Yellows" src="img/logo.png">
+				<img id="main-logo" alt="Crazy Rich Yellows" src="img/cry-logo-shadow.svg">
 				<div id="event">
 					<span class="event-name">Minting</span>
 					<img src="img/link-arrow.png">
@@ -340,10 +341,7 @@
 			</div></div>
 		</section>
 		<section id="join-us-section">
-			<div id="join-us-background"></div>
-			<div id="join-us-background-cover"></div>
-			<div id="join-us-background-on"></div>
-			<div id="join-us-wrapper">
+			<div class="align-center"><div class="align-center-inner">
 				<h2>JOIN US</h2>
 				<h1>Immigrate Now</h1>
 				<div id="join-us-button-container">
@@ -360,7 +358,7 @@
 						<div class="button-text">Opensea</div class="button-text">
 					</div></a>
 				</div>
-			</div>
+			</div></div>
 		</section>	
 	</main>
 	
@@ -399,6 +397,9 @@
 			const body = document.querySelector('body');
 			if(section > 0) body.classList.add('after-main');
 			else body.classList.remove('after-main');
+
+			if(section == 4) body.classList.add('last-page');
+			else body.classList.remove('last-page');
 		}
 
 	},{passive : false});
@@ -412,6 +413,9 @@
 		const body = document.querySelector('body');
 		if(section > 0) body.classList.add('after-main');
 		else body.classList.remove('after-main');
+
+		if(section == 4) body.classList.add('last-page');
+		else body.classList.remove('last-page');
 
 		return false;
 	}
