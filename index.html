@@ -179,18 +179,6 @@
 				<div id="yellows-team-collection-wrapper">
 					<h2>Yellows Team Collections</h2>
 					<div id="collections">
-						<img src="img/collection1.png">
-						<img src="img/collection2.png">
-						<img src="img/collection3.png">
-						<img src="img/collection4.png">
-						<img src="img/collection5.png">
-						<img src="img/collection6.png">
-						<img src="img/collection7.png">
-						<img src="img/collection8.png">
-						<img src="img/collection9.png">
-						<img src="img/collection10.png">
-						<img src="img/collection11.png">
-						<img src="img/collection12.png">
 					</div>
 				</div>
 				<div id="partners-wrapper">
@@ -291,6 +279,41 @@
 	change_lang = (lang) => {
 		main.className = lang;
 	}
+</script>
+
+<script type="text/javascript">
+	
+	const collections = document.querySelector('#collections');
+
+	const collection_data = [
+		['#5930', 'Bored Ape Yacht Club', 'https://opensea.io/assets/ethereum/0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d/5930'],
+		['#1152', 'Mutant Ape Yacht Club', 'https://opensea.io/assets/ethereum/0x60e4d786628fea6478f785a6d7e704777c86a7c6/1152'],
+		['#2651', 'CryptoPunks V1 (wrapped)', 'https://opensea.io/assets/ethereum/0x282bdd42f4eb70e7a9d9f40c8fea0825b7f68c5d/2651'],
+		['#11250', 'Clone X', 'https://opensea.io/assets/ethereum/0x49cf6f5d44e70224e2e23fdcdd2c053f30ada28b/8450'],
+		['#5930', 'Bored Ape Yacht Club', 'https://opensea.io/assets/ethereum/0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d/5930'],
+		['#1152', 'Mutant Ape Yacht Club', 'https://opensea.io/assets/ethereum/0x60e4d786628fea6478f785a6d7e704777c86a7c6/1152'],
+		['#2651', 'CryptoPunks V1 (wrapped)', 'https://opensea.io/assets/ethereum/0x282bdd42f4eb70e7a9d9f40c8fea0825b7f68c5d/2651'],
+		['#11250', 'Clone X', 'https://opensea.io/assets/ethereum/0x49cf6f5d44e70224e2e23fdcdd2c053f30ada28b/8450'],
+		['#5930', 'Bored Ape Yacht Club', 'https://opensea.io/assets/ethereum/0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d/5930'],
+		['#1152', 'Mutant Ape Yacht Club', 'https://opensea.io/assets/ethereum/0x60e4d786628fea6478f785a6d7e704777c86a7c6/1152'],
+		['#2651', 'CryptoPunks V1 (wrapped)', 'https://opensea.io/assets/ethereum/0x282bdd42f4eb70e7a9d9f40c8fea0825b7f68c5d/2651'],
+		['#11250', 'Clone X', 'https://opensea.io/assets/ethereum/0x49cf6f5d44e70224e2e23fdcdd2c053f30ada28b/8450'],
+	];
+
+	for(let i = 0; i < collection_data.length; i++) {
+		const col = collection_data[i];
+		collections.innerHTML += `<div class="collection button-cursor"
+			 onclick="window.open('${col[2]}')"
+		>
+			<img class="collection-img" src="img/collection${i+1}.png"/>
+			<div class="collection-info">
+				<img src="img/icon-link.svg" />
+				<span class="collection-number">${col[0]}</span>
+				<span class="collection-name">${col[1]}</span>
+			</div>
+		</div>`
+	}
+
 </script>
 
 <script>

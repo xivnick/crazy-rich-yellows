@@ -517,10 +517,47 @@ main section#section-team #yellows-team-collection-wrapper #collections {
   justify-content: space-between;
   align-content: space-between;
 }
-main section#section-team #yellows-team-collection-wrapper #collections img {
+main section#section-team #yellows-team-collection-wrapper #collections .collection {
+  position: relative;
   width: 140px;
   height: 140px;
+  background-color: #555555;
   border-radius: 10px;
+}
+main section#section-team #yellows-team-collection-wrapper #collections .collection:hover .collection-img {
+  opacity: 0;
+}
+main section#section-team #yellows-team-collection-wrapper #collections .collection:hover .collection-info {
+  opacity: 1;
+}
+main section#section-team #yellows-team-collection-wrapper #collections .collection .collection-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+main section#section-team #yellows-team-collection-wrapper #collections .collection .collection-info {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+main section#section-team #yellows-team-collection-wrapper #collections .collection .collection-info img {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+main section#section-team #yellows-team-collection-wrapper #collections .collection .collection-info .collection-number {
+  position: absolute;
+  top: 50px;
+  left: 15px;
+  font-size: 28px;
+  color: #F0C737;
+}
+main section#section-team #yellows-team-collection-wrapper #collections .collection .collection-info .collection-name {
+  position: absolute;
+  top: 88px;
+  left: 15px;
+  font-size: 16px;
 }
 main section#section-team #partners-wrapper {
   width: 940px;
