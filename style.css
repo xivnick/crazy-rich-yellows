@@ -85,6 +85,7 @@ p {
 
 #nav-main {
   bottom: 100vh;
+  bottom: calc(var(--vh, 1vh) * 100);
   transition-duration: 0.5s;
 }
 
@@ -118,22 +119,27 @@ main {
 
 .section-1 main {
   top: calc(-100vh + 60px);
+  top: calc(var(--vh, 1vh) * -100 + 60px);
 }
 
 .section-2 main {
   top: calc(-200vh + 120px);
+  top: calc(var(--vh, 1vh) * -200 + 120px);
 }
 
 .section-3 main {
   top: calc(-300vh + 180px);
+  top: calc(var(--vh, 1vh) * -300 + 180px);
 }
 
 .section-4 main {
   top: calc(-400vh + 240px);
+  top: calc(var(--vh, 1vh) * -400 + 240px);
 }
 
 .section-5 main {
   top: calc(-500vh + 300px);
+  top: calc(var(--vh, 1vh) * -500 + 300px);
 }
 
 #background-cover {
@@ -266,10 +272,12 @@ main {
   z-index: 0;
   width: 100vw;
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
 }
 #bg-wrapper #background {
   width: 100vw;
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   position: absolute;
   background-image: url("img/main-min.jpg");
   background-size: cover;
@@ -286,6 +294,7 @@ main {
 }
 main section {
   height: calc(100vh - 60px);
+  height: calc(var(--vh, 1vh) * 100 - 60px);
   width: 100vw;
   overflow: hidden;
   display: flex;
@@ -297,6 +306,7 @@ main section .content-wrapper {
 main section#section-main {
   position: relative;
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
 }
 main section#section-main #main-logo {
   width: 460px;
