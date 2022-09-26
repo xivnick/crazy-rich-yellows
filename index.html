@@ -15,6 +15,44 @@
 			 onclick="move(0)"
 			 src="img/logo.png"
 		/>
+		<div id="nav-link-wrapper" class="mobile-off">
+			<span class="nav-link hover-yellow" onclick="move(1)">STORY</span>
+			<span class="nav-link hover-yellow" onclick="move(2)">WHO'S NEXT</span>
+			<span class="nav-link hover-yellow" onclick="move(3)">VOTING</span>
+			<span class="nav-link hover-yellow" onclick="move(4)">TEAM</span>
+			<span class="nav-link hover-yellow" onclick="move(5)">JOIN US</span>
+		</div>
+		<div id="nav-button-wrapper" class="mobile-off">
+			<div class="nav-button hover-magnify">
+				<img alt="discord" src="img/others-logo-discord.svg">
+			</div>
+			<div class="nav-button hover-magnify">
+				<img alt="twitter" src="img/others-logo-twitter.svg">
+			</div>
+			<div class="nav-button hover-magnify">
+				<img alt="opensea" src="img/others-logo-opensea.svg">
+			</div>
+		</div>
+		<div id="nav-flag-wrapper" class="mobile-off">
+			<img alt="english flag"
+				 class="hover-magnify"
+				 onclick="change_lang('eng')"
+				 src="img/eng.png"
+			/>
+			<img alt="korean flag"
+				 class="hover-magnify"
+				 onclick="change_lang('kor')"
+				 src="img/kor.png"
+			/>
+		</div>
+		<img id="hamburger-button"
+			 class="hover-magnify mobile-on"
+			 alt="hamburger menu"
+			 onclick="click_hamburger()"
+			 src="img/hamburger.svg"
+		/>
+	</nav>
+	<nav id="nav-hamburger" class="mobile-on">
 		<div id="nav-link-wrapper">
 			<span class="nav-link hover-yellow" onclick="move(1)">STORY</span>
 			<span class="nav-link hover-yellow" onclick="move(2)">WHO'S NEXT</span>
@@ -61,23 +99,24 @@
 				/>
 				<div id="main-event-box">
 					<div id="main-event-prompt" class="text-center text-yellow">
-						waiting for >
+						waiting for
 					</div>
 					<div id="main-event-name" class="text-center">
-						Minting
+						WhiteList Minting
 					</div>
 					<div id="main-event-line"></div>
 					<div id="main-event-date-wrapper">
-						<span id="main-event-date">2022. 10. 04. 2am</span>
-						<span id="main-event-d-day" class="text-yellow">
-							D-3&nbsp;&nbsp;11:24:03
-						</span>
+						<span id="main-event-date"></span>
+						<span id="main-event-d-day" class="text-yellow"></span>
 					</div>
 				</div>
 				<div id="next-event-box">
 					<span id="next-event-prompt">next ></span>
-					<span id="next-event-name">Reveal</span>
-					<span id="next-event-date">2022. 10. 09.</span>
+					<div id="next-event-line" class="mobile-on"></div>
+					<div id="next-event-data-wrapper">
+						<span id="next-event-name">Reveal</span>
+						<span id="next-event-date">2022. 10. 15.</span>
+					</div>
 				</div>
 				<div id="main-button-wrapper">
 					<div class="main-button hover-magnify">
@@ -214,12 +253,6 @@
 </body>
 
 <script>
-	
-	const set_class = (cond, el, cl) => {
-
-		if(cond) el.classList.add(cl);
-		else el.classList.remove(cl);
-	}
 
 	let section_cur;
 
@@ -233,15 +266,38 @@
 		body.classList.add('section-' + section_cur);
 		
 		const navs = document.querySelectorAll('nav');
-
-		for(const nav of navs){
-			set_class(section_cur > 0, nav, 'show');
-		}
 	}
 
 	const move = set_section;
 
 	set_section(0);
+
+</script>
+
+<script>
+	const main_event_date = document.querySelector('#main-event-date');
+	main_event_date.innerHTML = '2022-10-01 5PM (UTC)';
+
+	const set_time = () => {
+
+		const event_time = new Date('2022-10-01T17:00:00.000Z');
+		const now = new Date();
+
+		const diff = event_time - now;
+
+		const add_zero = (s) => { s = '' + s; if(s.length < 2) s = '0' + s; return s; }
+
+		const diffDay = Math.floor(diff / (1000*60*60*24));
+		const diffHour = add_zero( Math.floor((diff / (1000*60*60)) % 24) );
+		const diffMin = add_zero( Math.floor((diff / (1000*60)) % 60) );
+		const diffSec = add_zero( Math.floor(diff / 1000 % 60) );
+
+		const event_dday = document.querySelector('#main-event-d-day');
+		event_dday.innerHTML = `${diffDay} Days, ${diffHour}:${diffMin}:${diffSec}`;
+	}
+
+	set_time();
+	setInterval(set_time, 1000);
 
 </script>
 
@@ -352,14 +408,12 @@
 		const id = random(15) - 1;
 		change(id);
 	}, 1500);
-
-
 </script>
 
 <script>
 	const click_hamburger = () => {
-		const hamburger_nav = document.querySelector('#hamburger-nav');
-		hamburger_nav.classList.toggle('open')
+		const nav_hamburger = document.querySelector('#nav-hamburger');
+		nav_hamburger.classList.toggle('open');
 	}
 </script>
 
