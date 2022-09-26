@@ -643,7 +643,7 @@ main section#section-join-us #join-us-button-container .join-us-button .button-t
   #nav-hamburger {
     width: 100vw;
     height: 192px;
-    position: absolute;
+    position: fixed;
     bottom: 100vh;
     z-index: 9;
     background-color: #111111;
