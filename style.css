@@ -644,7 +644,7 @@ main section#section-join-us #join-us-button-container .join-us-button .button-t
     width: 100vw;
     height: 192px;
     position: fixed;
-    top: -132px;
+    top: -192px;
     z-index: 9;
     background-color: #111111;
     transition-duration: 0.5s;
@@ -694,7 +694,7 @@ main section#section-join-us #join-us-button-container .join-us-button .button-t
     margin: 0;
   }
   #nav-hamburger.open {
-    transform: translateY(100%);
+    transform: translateY(252px);
   }
   main section .content-wrapper {
     position: relative;
