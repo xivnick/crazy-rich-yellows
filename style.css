@@ -47,8 +47,10 @@ p {
 .hover-magnify {
   transition-duration: 0.5s;
 }
-.hover-magnify:hover {
-  transform: scale(1.1, 1.1);
+@media (min-width: 481px) {
+  .hover-magnify:hover {
+    transform: scale(1.1, 1.1);
+  }
 }
 
 .hover-yellow, .text-button {
@@ -898,7 +900,7 @@ p {
     list-style: decimal outside;
   }
   main section#section-next-yellow-man ol li {
-    text-align: left;
+    text-align: justify;
     font-size: 15px;
     line-height: 20px;
     margin-bottom: 20px;
