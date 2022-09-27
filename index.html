@@ -54,11 +54,22 @@
 	</nav>
 	<nav id="nav-hamburger" class="mobile-on">
 		<div id="nav-link-wrapper">
-			<span class="nav-link hover-yellow" onclick="move(1)">STORY</span>
-			<span class="nav-link hover-yellow" onclick="move(3)">WHO'S NEXT</span>
-			<span class="nav-link hover-yellow" onclick="move(4)">VOTING</span>
-			<span class="nav-link hover-yellow" onclick="move(5)">TEAM</span>
-			<span class="nav-link hover-yellow" onclick="move(6)">JOIN US</span>
+			<span class="nav-link hover-yellow" 
+				  onclick="location.href='#section-story-mobile-1'">
+				STORY
+			</span>
+			<span class="nav-link hover-yellow" 
+				  onclick="location.href='#section-next-yellow-man'">
+				WHO'S NEXT</span>
+			<span class="nav-link hover-yellow" 
+				  onclick="location.href='#section-process'">
+				VOTING</span>
+			<span class="nav-link hover-yellow" 
+				  onclick="location.href='#section-team'">
+				TEAM</span>
+			<span class="nav-link hover-yellow" 
+				  onclick="location.href='#section-join-us'">
+				JOIN US</span>
 		</div>
 		<div id="nav-button-wrapper">
 			<div class="nav-button hover-magnify">
@@ -285,9 +296,11 @@
 
 <script>
 
-	let section_cur;
-
 	const set_section = (sec) => {
+
+		if(sec == 0) {
+			window.scrollTo(0, 0);
+		}
 
 		section_cur = sec;
 

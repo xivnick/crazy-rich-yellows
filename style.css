@@ -136,7 +136,6 @@ p {
   #background-cover {
     transition-property: opacity, width, height, top, left, border-radius;
     transition-duration: 1s, 0.5s, 0.5s, 0.5s, 0.5s, 0.5s;
-    transition-delay: 0s, 1s, 1s, 1s, 1s, 1s;
   }
   .section-0 #background-cover {
     opacity: 0.4;
