@@ -860,6 +860,7 @@ main section#section-join-us #join-us-button-container .join-us-button .button-t
   main section#section-next-yellow-man ol {
     padding-left: 24px;
     list-style-position: outside;
+    list-style-type: decimal;
   }
   main section#section-next-yellow-man ol li {
     flex-shrink: 0;
