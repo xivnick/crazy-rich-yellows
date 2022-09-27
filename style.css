@@ -805,6 +805,7 @@ p {
     position: absolute;
     bottom: 20px;
     width: 60px;
+    animation-duration: 0.5s;
     left: calc(50% - 30px);
   }
   main section#section-story-mobile-1 {
