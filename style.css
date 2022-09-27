@@ -705,8 +705,9 @@ p {
   main section#section-main {
     position: relative;
     padding-top: 104px;
-    height: 100vh;
-    height: calc(var(--vh, 1vh) * 100);
+    padding-bottom: 100px;
+    min-height: 100vh;
+    min-height: calc(var(--vh, 1vh) * 100);
     background: linear-gradient(180deg, rgba(17, 17, 17, 0.4) 0%, rgba(17, 17, 17, 0.4) 85%, rgba(17, 17, 17, 0.9) 100%);
   }
   main section#section-main #main-logo {
@@ -788,7 +789,6 @@ p {
   main section#section-main #main-button-wrapper {
     width: 152px;
     margin: 0 auto;
-    margin-bottom: 180px;
     display: flex;
     justify-content: space-between;
   }
@@ -912,7 +912,11 @@ p {
   main section#section-process h1 {
     margin-bottom: 24px;
   }
-  main section#section-process .process-wrapper {
+  main section#section-process #process-wrapper-wrapper {
+    margin-bottom: 40px;
+  }
+  main section#section-process #process-wrapper-wrapper .process-wrapper {
+    position: relative;
     width: 100%;
     height: 144px;
     padding-top: 24px;
@@ -920,7 +924,41 @@ p {
     margin-bottom: -2px;
     border: 2px solid #F0C737;
     border-right: 0;
-    overflow: hidden;
+  }
+  main section#section-process #process-wrapper-wrapper .process-wrapper.reverse {
+    border: 2px solid #F0C737;
+    border-left: 0;
+  }
+  main section#section-process #process-wrapper-wrapper .process-wrapper.reverse img {
+    left: auto;
+    right: 16px;
+  }
+  main section#section-process #process-wrapper-wrapper .process-wrapper.reverse p {
+    right: auto;
+    left: 24px;
+  }
+  main section#section-process #process-wrapper-wrapper .process-wrapper img {
+    width: 64px;
+    position: absolute;
+    left: 16px;
+    bottom: 24px;
+  }
+  main section#section-process #process-wrapper-wrapper .process-wrapper h3 {
+    font-size: 18px;
+  }
+  main section#section-process #process-wrapper-wrapper .process-wrapper p {
+    width: calc(100% - 124px);
+    position: absolute;
+    top: 88px;
+    right: 24px;
+    transform: translateY(-50%);
+    font-size: 14px;
+    line-height: 16px;
+    text-align: justify;
+  }
+  main section#section-process #whitepaper-text-button {
+    display: block;
+    margin-bottom: 64px;
   }
   main section#section-team {
     position: relative;
