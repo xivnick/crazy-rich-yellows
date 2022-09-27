@@ -90,23 +90,27 @@ p {
 }
 
 .section-1 #nav-main {
-  transform: translateY(100%);
+  transform: translateY(60px);
 }
 
 .section-2 #nav-main {
-  transform: translateY(100%);
+  transform: translateY(60px);
 }
 
 .section-3 #nav-main {
-  transform: translateY(100%);
+  transform: translateY(60px);
 }
 
 .section-4 #nav-main {
-  transform: translateY(100%);
+  transform: translateY(60px);
 }
 
 .section-5 #nav-main {
-  transform: translateY(100%);
+  transform: translateY(60px);
+}
+
+.section-6 #nav-main {
+  transform: translateY(60px);
 }
 
 main {
@@ -142,6 +146,11 @@ main {
   top: calc(var(--vh, 1vh) * -500 + 300px);
 }
 
+.section-6 main {
+  top: calc(-600vh + 360px);
+  top: calc(var(--vh, 1vh) * -600 + 360px);
+}
+
 #background-cover {
   transition-property: opacity, width, height, top, left, border-radius;
   transition-duration: 1s, 0.5s, 0.5s, 0.5s, 0.5s, 0.5s;
@@ -169,6 +178,10 @@ main {
 }
 
 .section-5 #background-cover {
+  opacity: 0.8;
+}
+
+.section-6 #background-cover {
   opacity: 0.8;
 }
 
@@ -217,10 +230,10 @@ main {
 
 #nav-main {
   width: 100vw;
-  height: 60px;
+  height: 80px;
   position: fixed;
   z-index: 10;
-  padding: 0 100px;
+  padding: 20px 100px 0;
   background-color: #111111;
   display: flex;
   align-items: center;
@@ -310,7 +323,7 @@ main section#section-main {
 }
 main section#section-main #main-logo {
   width: 460px;
-  margin: auto;
+  margin: 0 auto;
   display: block;
   margin-bottom: 50px;
 }
@@ -319,7 +332,7 @@ main section#section-main #main-event-box {
   height: 200px;
   border-radius: 20px;
   padding-top: 30px;
-  margin: auto;
+  margin: 0 auto;
   margin-bottom: 20px;
   background-color: rgba(0, 0, 0, 0.8);
 }
@@ -334,7 +347,7 @@ main section#section-main #main-event-box #main-event-name {
 main section#section-main #main-event-box #main-event-line {
   width: 540px;
   height: 2px;
-  margin: auto;
+  margin: 0 auto;
   background-color: #808080;
 }
 main section#section-main #main-event-box #main-event-date-wrapper {
@@ -350,7 +363,7 @@ main section#section-main #next-event-box {
   height: 70px;
   border-radius: 20px;
   padding: 4px 50px 0;
-  margin: auto;
+  margin: 0 auto;
   margin-bottom: 20px;
   background-color: rgba(128, 128, 128, 0.8);
   display: flex;
@@ -374,7 +387,7 @@ main section#section-main #next-event-box #next-event-data-wrapper #next-event-d
 }
 main section#section-main #main-button-wrapper {
   width: 220px;
-  margin: auto;
+  margin: 0 auto;
   margin-bottom: 50px;
   display: flex;
   justify-content: space-between;
@@ -406,7 +419,7 @@ main section#section-main #bottom-arrow {
 }
 main section#section-story .story-wrapper {
   width: 940px;
-  margin: auto;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
 }
@@ -444,7 +457,7 @@ main section#section-next-yellow-man h1 {
 main section#section-next-yellow-man #random-pfps {
   width: min(780px, 78vh);
   height: min(460px, 46vh);
-  margin: auto;
+  margin: 0 auto;
   margin-bottom: 50px;
   display: flex;
   flex-wrap: wrap;
@@ -465,10 +478,10 @@ main section#section-next-yellow-man #random-pfps .pfp.clicked {
 main section#section-next-yellow-man h2 {
   margin-bottom: 10px;
 }
-main section#section-next-yellow-man p {
+main section#section-next-yellow-man ol li {
   line-height: 28px;
 }
-main section#section-next-yellow-man p strong {
+main section#section-next-yellow-man ol li strong {
   font-size: 20px;
   font-weight: 400;
 }
@@ -484,7 +497,7 @@ main section#section-process #process-wrapper-wrapper .process-wrapper {
   display: flex;
   align-items: center;
   padding-left: 40px;
-  margin: auto;
+  margin: 0 auto;
   margin-bottom: -2px;
   border: 2px solid #F0C737;
   border-right: 0;
@@ -518,7 +531,7 @@ main section#section-team {
 }
 main section#section-team #yellows-team-collection-wrapper {
   width: 940px;
-  margin: auto;
+  margin: 0 auto;
   padding-bottom: 46px;
   display: flex;
   justify-content: space-between;
@@ -578,7 +591,7 @@ main section#section-team #yellows-team-collection-wrapper #collections .collect
 }
 main section#section-team #partners-wrapper {
   width: 940px;
-  margin: auto;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
 }
@@ -610,7 +623,7 @@ main section#section-join-us h1 {
 }
 main section#section-join-us #join-us-button-container {
   width: 460px;
-  margin: auto;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
 }
@@ -635,7 +648,7 @@ main section#section-join-us #join-us-button-container .join-us-button .button-t
     display: none !important;
   }
   #nav-main {
-    padding: 0 24px;
+    padding: 20px 24px 0;
   }
   .section-0 #nav-hamburger {
     transform: translateY(0) !important;
@@ -696,12 +709,27 @@ main section#section-join-us #join-us-button-container .join-us-button .button-t
   #nav-hamburger.open {
     transform: translateY(252px);
   }
+  main section {
+    position: relative;
+  }
+  main section h1 {
+    font-size: 32px;
+  }
   main section .content-wrapper {
     position: relative;
-    padding: 0 24px;
+    height: 100%;
+    padding: 24px 24px 74px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  main section#section-main .content-wrapper {
+    padding-bottom: 24px;
   }
   main section#section-main #main-logo {
     width: calc(100% - 72px);
+    margin-bottom: 40px;
   }
   main section#section-main #main-event-box {
     width: 100%;
@@ -764,6 +792,122 @@ main section#section-join-us #join-us-button-container .join-us-button .button-t
   main section#section-main #bottom-arrow {
     width: 60px;
     left: calc(50% - 30px);
+  }
+  main section#section-story-mobile-1 h1 {
+    flex-shrink: 0;
+    text-align: center;
+    margin-bottom: 48px;
+  }
+  main section#section-story-mobile-1 .img-wrapper {
+    width: 100%;
+    flex: 0 1 260px;
+    background: url("img/story-yellow-land.png") no-repeat center;
+    background-size: contain;
+    margin-bottom: 32px;
+  }
+  main section#section-story-mobile-1 p {
+    flex-shrink: 0;
+    width: 100%;
+    line-height: 28px;
+    text-align: justify;
+    margin-bottom: 32px;
+  }
+  main section#section-story-mobile-2 h1 {
+    flex-shrink: 0;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  main section#section-story-mobile-2 .img-wrapper {
+    width: 100%;
+    flex: 0 1 260px;
+    background: url("img/story-yellow-man.png") no-repeat center;
+    background-size: contain;
+    margin-bottom: 24px;
+  }
+  main section#section-story-mobile-2 p {
+    flex-shrink: 0;
+    width: 100%;
+    line-height: 28px;
+    text-align: justify;
+    margin-bottom: 32px;
+  }
+  main section#section-next-yellow-man h1 {
+    flex-shrink: 0;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  main section#section-next-yellow-man #random-pfps {
+    position: relative;
+    flex-shrink: 0;
+    width: 312px;
+    height: 232px;
+    margin-bottom: 24px;
+  }
+  main section#section-next-yellow-man #random-pfps .pfp {
+    width: 72px;
+    height: 72px;
+  }
+  main section#section-next-yellow-man #random-pfps .pfp:nth-child(n+13) {
+    display: none;
+  }
+  main section#section-next-yellow-man h2 {
+    flex-shrink: 0;
+    text-align: center;
+    font-size: 20px;
+    margin-top: auto;
+    margin-bottom: 16px;
+  }
+  main section#section-next-yellow-man ol {
+    padding-left: 24px;
+    list-style-position: outside;
+  }
+  main section#section-next-yellow-man ol li {
+    flex-shrink: 0;
+    text-align: left;
+    font-size: 15px;
+    line-height: 20px;
+    margin-bottom: 20px;
+  }
+  main section#section-next-yellow-man ol li strong {
+    font-size: 15px;
+  }
+  .bottom-button {
+    width: 100vw;
+    height: 50px;
+    position: fixed;
+    bottom: -50px;
+    z-index: 10;
+    background-color: #111111;
+    display: flex;
+    align-items: center;
+  }
+  .bottom-button img {
+    width: 24px;
+    margin: 0 auto;
+  }
+  #next-button {
+    transition-duration: 0.5s;
+  }
+  .section-1 #next-button {
+    transform: translateY(-50px);
+  }
+  .section-2 #next-button {
+    transform: translateY(-50px);
+  }
+  .section-3 #next-button {
+    transform: translateY(-50px);
+  }
+  .section-4 #next-button {
+    transform: translateY(-50px);
+  }
+  .section-5 #next-button {
+    transform: translateY(-50px);
+  }
+  #top-button {
+    transition-duration: 0.5s;
+  }
+  .section-6 #top-button {
+    transform: translateY(-50px);
   }
 }
 @media (min-width: 481px) {
