@@ -463,10 +463,14 @@ p {
 					&#story-yellow-land{
 
 						padding-left: calc(grid(12) - grid(11));
-						margin-bottom: -100px;
+						margin-bottom: -60px;
 						
 						.story-text-wrapper {
-							padding-top: 50px;
+							padding-top: 90px;
+						}
+
+						img {
+							margin-left: 40px;
 						}
 					}
 

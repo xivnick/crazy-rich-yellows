@@ -398,10 +398,13 @@ p {
   }
   main section#section-story .story-wrapper#story-yellow-land {
     padding-left: 80px;
-    margin-bottom: -100px;
+    margin-bottom: -60px;
   }
   main section#section-story .story-wrapper#story-yellow-land .story-text-wrapper {
-    padding-top: 50px;
+    padding-top: 90px;
+  }
+  main section#section-story .story-wrapper#story-yellow-land img {
+    margin-left: 40px;
   }
   main section#section-story .story-wrapper#story-yellow-man {
     padding-right: 80px;
