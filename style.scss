@@ -98,11 +98,11 @@ p {
 }
 
 .eng .kor{
-	display: none;
+	display: none !important;
 }
 
 .kor .eng{
-	display: none;
+	display: none !important;
 }
 
 .no-display{
