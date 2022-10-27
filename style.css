@@ -502,9 +502,6 @@ p {
   main section#section-process #process-wrapper-wrapper .process-wrapper .process-text-wrapper p {
     text-align: left;
   }
-  main section#section-team .content-wrapper {
-    transform: scale(0.8, 0.8);
-  }
   main section#section-team #yellows-team-collection-wrapper {
     width: 940px;
     margin: 0 auto;
@@ -584,6 +581,13 @@ p {
   }
   main section#section-team #partners-wrapper #partners img {
     width: 300px;
+  }
+  main section#section-team #disclaimer-wrapper {
+    width: 860px;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    margin: 0 auto;
   }
   main section#section-join-us {
     position: relative;
@@ -974,6 +978,9 @@ p {
   main section#section-team #partners-wrapper h2 {
     margin-bottom: 16px;
   }
+  main section#section-team #disclaimer-wrapper {
+    margin-bottom: 24px;
+  }
   main section#section-team h2 {
     font-size: 24px;
     width: 132px;
@@ -1044,19 +1051,18 @@ p {
     font-size: 16px;
   }
   main section#section-team #partners {
-    width: 312px;
-    height: 128px;
-    margin-left: 50%;
-    margin-bottom: 64px;
-    transform: translateX(-50%);
+    width: 100%;
     display: flex;
-    justify-content: space-between;
-    align-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
   }
   main section#section-team #partners img {
-    width: 152px;
-    height: 60px;
+    width: 70%;
+  }
+  main section#section-team #disclaimer-wrapper {
+    font-size: 11px;
+    line-height: 18px;
+    text-align: center;
   }
   main section#section-join-us {
     padding-top: 80px;
