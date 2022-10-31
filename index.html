@@ -485,12 +485,12 @@
 	const pfp_ids = []
 
 	for(let i = 0; i < 15; i++){
-		let id = random(269);
+		let id = random(300);
 
-		while(pfp_ids.includes(id)) id = random(269);
+		while(pfp_ids.includes(id)) id = random(300);
 
 		pfp_ids.push(id);
-		random_pfps.innerHTML += `<img class='pfp hover-magnify' onclick='change(${i})' src='pfps2/y${id}.png'>`
+		random_pfps.innerHTML += `<img class='pfp hover-magnify' onclick='change(${i})' src='pfps3/y${id}.png'>`
 	}
 
 	const change = (i) => {
