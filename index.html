@@ -141,7 +141,7 @@
 						now
 					</div>
 					<div id="main-event-name" class="text-center">
-						Election Campaign
+						Yellow Man Voting
 					</div>
 					<div id="main-event-line"></div>
 					<div id="main-event-date-wrapper">
@@ -156,8 +156,8 @@
 					<span id="next-event-prompt">next ></span>
 					<div id="next-event-line" class="mobile-on"></div>
 					<div id="next-event-data-wrapper">
-						<span id="next-event-name">Yellow Man Voting</span>
-						<span id="next-event-date">2022. 11. 27.</span>
+						<span id="next-event-name">Result Announcement</span>
+						<span id="next-event-date">2022. 11. 30.</span>
 					</div>
 				</div>
 				<div id="main-button-wrapper">
@@ -381,11 +381,11 @@
 
 <script>
 	const main_event_date = document.querySelector('#main-event-date');
-	main_event_date.innerHTML = '<span class="eng">2022.11.16. 8PM - 2022.11.29. 8PM (EST)</span><span class="kor">2022.11.17. 10AM - 2022.11.30. 10AM (KST)</span>';
+	main_event_date.innerHTML = '<span class="eng">2022.11.26. 8PM - 2022.11.29. 8PM (EST)</span><span class="kor">2022.11.27. 10AM - 2022.11.30. 10AM (KST)</span>';
 
 	const set_time = () => {
 
-		const event_time = new Date('2022-11-11T01:00:00.000Z');
+		const event_time = new Date('2022-11-27T01:00:00.000Z');
 		const now = new Date();
 
 		const diff = event_time - now;
